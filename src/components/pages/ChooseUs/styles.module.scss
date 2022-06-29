@@ -1,8 +1,9 @@
+@import "../../../scss/variables.scss";
 .main{
     position: relative;
     margin-top: 75px;
     height: 700px;
-    background: #3E5E7E;   
+    background: $gray;   
 }
 .convert{
     //    font-family: 'Roboto';
@@ -13,7 +14,7 @@
     text-align: center;
     padding-top: 60px;
     padding-bottom: 30px;
-    color: #FFFFFF;
+    color: $txt-white;
     }
 .choose{
     // font-family: 'Roboto';
@@ -23,7 +24,7 @@ font-size: 54px;
 line-height: 63px;
 margin: 10px;
 text-align: center;
-color: #E29E4E;
+color: $caramel;
 }
 .paragraph1{
     // font-family: 'Roboto';
@@ -32,7 +33,7 @@ font-weight: 300;
 font-size: 28px;
 line-height: 38px;
 text-align: center;
-color: #FFFFFF;
+color: $txt-white;
 margin: 35px 62px;
 }
 .paragraph2{
@@ -41,6 +42,6 @@ font-weight: 300;
 font-size: 28px;
 line-height: 38px;
 text-align: center;
-color: #FFFFFF;
+color: $txt-white;
 margin: 0px 62px;
 }

@@ -1,9 +1,11 @@
+@import "../../../scss/variables.scss";
+
 .Aboutmain{
     // position: absolute;
     left: 1px;
     // top: 114px;
     // height: 652px;
-    background: #DDEBFF;
+    background:$mild-blue;
 }
 .heading1{
     // font-family: 'Roboto';
@@ -11,7 +13,7 @@
     font-weight: 500;
     font-size: 80px;
     line-height: 117px;
-    color: #02285B;
+    color: $primary;
     text-align: center;
     margin-bottom: 50px;
     padding-top: 30px;
@@ -22,13 +24,13 @@
     font-weight: 300;
     font-size: 26px;
     line-height: 38px;
-    color: #323232;
+    color: $txt-sandstone;
 }
 .graphh{
     font-style: normal;
     font-weight: 300;
     font-size: 26px;
     line-height: 38px;
-    color: #323232;
+    color:$txt-sandstone;
     padding-bottom: 80px;
 }

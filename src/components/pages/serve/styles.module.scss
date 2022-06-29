@@ -1,3 +1,4 @@
+@import "../../../scss/variables.scss";
 .serve{
     position: relative;
 }
@@ -9,7 +10,7 @@ font-weight: 400;
 font-size: 40px;
 line-height: 47px;
 text-align: center;
-color: #000000;
+color: $txt-black;
 }
 .technology{
     // font-family: 'Roboto';
@@ -18,8 +19,7 @@ font-weight: 500;
 font-size: 54px;
 line-height: 63px;
 text-align: center;
-
-color: #000000;
+color: $txt-black;
 }
 .map{
     
@@ -29,7 +29,7 @@ font-weight: 300;
 font-size: 28px;
 line-height: 38px;
 text-align: center;
-color: #323232;
+color: $txt-sandstone;
 }
 .carddiv{
     display:flex;
@@ -46,14 +46,14 @@ color: #323232;
         font-size: 22px;
         line-height: 29px;
         text-align: center;
-        color: #000000;
+        color: $txt-black;
 }
 .cardPic{
     padding: 20px;
 }
 .request{
     position: relative;
-    background: #3E5E7E;
+    background: $gray;
     border-radius: 5px;
     width: 24%;
     // font-family: 'Roboto';
@@ -66,5 +66,5 @@ color: #323232;
     bottom: 40px;
     text-align: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: $txt-white;
 }
