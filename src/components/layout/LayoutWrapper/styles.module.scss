@@ -1,0 +1,7 @@
+@use "scss/base/utils";
+
+.content_wrapper {
+	background-color: #ffffff;
+	padding-top: utils.toRem(50);
+	padding-bottom: utils.toRem(50);
+}
