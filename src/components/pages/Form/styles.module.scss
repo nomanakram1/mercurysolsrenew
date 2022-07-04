@@ -10,12 +10,18 @@
     margin-top:60px;
 }
 .form_control{
-
     border: hidden;
     /* border-bottom: 1px solid black; */
     border-radius: 0px;
     border-bottom: 1px solid $border-clr;
     width: 80%;
+}
+.form_control1{
+    border: hidden;
+    /* border-bottom: 1px solid black; */
+    border-radius: 0px;
+    border-bottom: 1px solid $border-clr;
+    width: 100%;
 }
 .button{
     font-style: normal;
@@ -24,8 +30,12 @@
     line-height: 35px;
     text-align: center;
     color: $txt-white;
-    width: 25%;
-    margin-left: 37.5%;
+     width: 35%;
+    // margin-left: 37.5%;
     background: $gray;
-    border-radius: 5px  $gray;
+    border: none;
+    border-radius: 10px $gray;
+}
+.divvv{
+    text-align:center;
 }
