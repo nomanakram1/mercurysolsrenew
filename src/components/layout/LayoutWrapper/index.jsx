@@ -55,13 +55,13 @@ const LayoutWrapper = ({ path,children }) => {
 					</div>
 				</>
 			}	
-			{
+			{/* {
 				<>
 					<Header/>
 					<div className={styles.content_wrapper}>{children}</div>
 				</>
 				
-			}
+			} */}
 			
 			<Footer />
 		</>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container,Row,Col,Button } from "react-bootstrap";
-import {Form, Input,Modal} from "antd";
+import {Form, Input} from "antd";
 import * as styles from './styles.module.scss';
 const InfoCard=()=>{
 
