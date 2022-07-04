@@ -42,25 +42,25 @@ const Footer = () => {
 							<div>
 								<h1 className={styles.lists}>Contact Us</h1>
 							</div>
-							<div class="d-flex">
+							<div className="d-flex">
 									<StaticImage className={styles.picc} src="../../../assets/images/email.png" alt="" />
 								<a href="mailto:hr@mercurysols.org" className={styles.lists}>
 									hr@mercurysols.org
 								</a>
 							</div>
-							<div class="d-flex">
+							<div className="d-flex">
 								<StaticImage className={styles.picc} src="../../../assets/images/email.png" alt="" />
 								<a className={styles.lists} href="mailto:info@mercurysols.org">
 									info@mercurysols.org
 								</a>
 							</div>
-							<div class="d-flex">
+							<div className="d-flex">
 								<div>
 									<StaticImage className={styles.picc} src="../../../assets/images/phone.png" alt="" />
 								</div>
 								<a href="tel:+92 300 6777686" className={styles.lists}>+92 300 6777686</a>
 							</div>
-							<div class="d-flex ">
+							<div className="d-flex ">
 								<div>
 									<StaticImage className={styles.picc} src="../../../assets/images/phone2.png" alt="" />
 								</div>
