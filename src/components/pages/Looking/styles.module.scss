@@ -37,7 +37,7 @@
 .buttonsdiv{
     display: flex;
     justify-content: space-evenly;
-    padding-top: 20px;
+    padding: 20px;
 }
 .buttons{
     background: #02285B;
@@ -50,4 +50,7 @@ font-weight: 400;
 font-size: 20px;
 line-height: 33px;
 color: #FFFFFF;
+}
+.setmargin{
+    margin: 0px;
 }

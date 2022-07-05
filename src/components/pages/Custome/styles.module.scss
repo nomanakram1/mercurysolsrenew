@@ -2,7 +2,9 @@
 .custome_div{
     background: $offwhite;
 }
-
+.projectrow{
+    margin: 0px;
+}
 .project{   
 // font-family: 'Roboto';
 font-style: normal;
@@ -34,24 +36,157 @@ color: $txt-sandstone;
 margin: 10px;
 padding-bottom: 30px;
 }
-.one{
+
+.C_images11{
+    // padding: 40px 40px;
     background-color: $purple;
-    height: 200px;
+    // height: 240px;
+}
+.C_images12{
+    // padding: 40px 40px;
+    background-color: $blue;
+    // height: 240px;
+    height: 100%;
+}
+.C_images21{
+    // padding: 40px 40px;
+    background-color: $cyan;
+    // height: 240px;
+    height: 100%;
+}
+.C_images22{
+    // padding: 40px 40px;
+    background-color: $pink;
+    // height: 240px;
+    height: 100%;
+}
+.C_images3{
+    padding: 40px 40px;
+    background-color: $gray;
+     height: 100%;
+   
+}
+.C_images41{
+    // padding: 40px 40px;
+    background-color: $primary;
+    // height: 240px;
+    height: 100%;
+}
+.C_images42{
+    // padding: 40px 40px;
+    background-color: $cyan;
+    // height: 240px;
+    height: 100%;
+}
+
+
+.parentdiv{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    width: 100%;
+}
+.one{
+    // background-color: $purple;
+    height: 240px;
+    width:25%
 }
 .two{
-    background-color: $pink;
-    height: 200px;
-}
-.C_images{
- padding: 40px 40px;
-
+    // background-color: $pink;
+    height: 240px;
+    width:25%
 }
 .three{
-    background-color: $cyan;
-    height: 200px;
-    position: inherit;
+    // background-color: $cyan;
+    height:340px;
+    // position: inherit;
+    width:25%
 }
 .four{
-    background-color: $blue;
-    height: 400px;
+    // background-color: $blue;
+    height: 240px;
+    width:25%
 }
+
+@media(max-width:768px) {
+    .cardOuterRow{
+        flex-direction: column;
+    }
+    .one{
+        // background-color: $purple;
+        height: 240px;
+        width:50%
+    }
+    .two{
+        // background-color: $pink;
+        height: 240px;
+        width:50%
+    }
+    .three{
+        // background-color: $cyan;
+        height:340px;
+        // position: inherit;
+        width:50%
+    }
+    .four{
+        // background-color: $blue;
+        height: 240px;
+        width:50%
+    }
+}
+
+.Viewbutton{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: $txt-white;
+     width: 32%;
+    // margin-left: 37.5%;
+    background: $gray;
+    border: none;
+    
+    border-radius: 10px $gray;
+}
+.Viewbutton1{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: $txt-white;
+     width: 32%;
+    // margin-left: 37.5%;
+    background: $pink;
+    border: none;
+    
+    border-radius: 10px $gray;
+}
+.btnDiv{
+    text-align:center;
+    padding-bottom: 50px;
+}
+.Workus{
+    // font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 47px;
+    text-align: center;
+    color: $primary;
+    padding-top: 50px;
+}
+
+.Workgraph{
+    
+    // font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 38px;
+    text-align: center;
+    color: $txt-sandstone;
+
+}
+

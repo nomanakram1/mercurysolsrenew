@@ -17,16 +17,15 @@ const Servicepage=()=>{
                 </Row>
             </Container>
         </div>
-        <Row className={styles.mainSblock} xs={1} sm={2} md={4} lg={4}>
+        <Row className={styles.mainSblock} xs={1} sm={2} md={3} lg={5}>
         {/* <Col lg={3} md={4} sm={6} xs={9}>
                         <div className={styles.Sblock}>
                         <StaticImage className={styles.cardPic} src="../../../assets/images/Web-Development.png" alt="" />
                             <p className={styles.Sheading}>Flutter</p>
                         </div>      
                     </Col> */}
-            <Col lg={3} md={3} sm={6} xs={9}>
-                <Card className={styles.card} >
-                {/* <Card.Img variant="top" src="../../../assets/images/blue_banner.png" /> */}
+            <Col lg={3} md={3} sm={6} xs={9} className={styles.cardpadding}>
+                <Card className={styles.card}>
                     <StaticImage className={styles.cardPic} src="../../../assets/images/Web-Development.png" alt="" />
                     <Card.Body>
                         <Card.Text>
@@ -35,7 +34,7 @@ const Servicepage=()=>{
                     </Card.Body>
                 </Card>
             </Col>
-            <Col lg={3} md={3} sm={6} xs={9}>
+            <Col lg={3} md={3} sm={6} xs={9}  className={styles.cardpadding}>
                 <Card className={styles.card}>
                 <StaticImage className={styles.cardPic} src="../../../assets/images/web.png" alt="" />
                     <Card.Body>
@@ -45,9 +44,8 @@ const Servicepage=()=>{
                     </Card.Body>
                 </Card>
             </Col>
-            <Col lg={3} md={3} sm={6} xs={9}>
+            <Col lg={3} md={3} sm={6} xs={9} className={styles.cardpadding}>
                 <Card className={styles.card} >
-                {/* <Card.Img variant="top" src="../../../assets/images/blue_banner.png" /> */}
                 <StaticImage className={styles.cardPic} src="../../../assets/images/e-commerce.png" alt="" />
                     <Card.Body>
                         <Card.Text>
@@ -56,32 +54,34 @@ const Servicepage=()=>{
                     </Card.Body>
                 </Card>
             </Col>
-            <Col lg={3} md={3} sm={6} xs={9}>
+            <Col lg={3} md={3} sm={6} xs={9} className={styles.cardpadding}>
                 <Card className={styles.card} >
-                {/* <Card.Img variant="top" src="../../../assets/images/blue_banner.png" /> */}
                 <StaticImage className={styles.cardPic} src="../../../assets/images/Game-Development.png" alt="" />
                 <Card.Body>
                     <Card.Text>
-                Game Development
+                        Game Development
                     </Card.Text>
                 </Card.Body>
                 </Card>
             </Col>
-            <Col lg={3} md={3} sm={6} xs={9}>
+            <Col lg={3} md={3} sm={6} xs={9} className={styles.cardpadding}>
             <Card className={styles.card} >
-            {/* <Card.Img variant="top" src="../../../assets/images/blue_banner.png" /> */}
             <StaticImage className={styles.cardPic} src="../../../assets/images/webic_ui-ux.png" alt="" />
             <Card.Body>
                 <Card.Text>
-                User Experiance
+                    User Experiance
                 </Card.Text>
             </Card.Body>
             </Card>
             </Col>
- 
          </Row>
-         <div>
+         {/* <div>
          <Button className={styles.request}>Request a Quote</Button>
+         </div> */}
+         <div className={styles.btnSDiv} >
+            <button className={styles.ViewSbutton1} variant="primary" type="submit">
+                 Contact Us
+            </button>
          </div>
         </>
     )

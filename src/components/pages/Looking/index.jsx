@@ -16,21 +16,38 @@ const Lookingpage=()=>{
                     </Col>  
                 </Row>
             </Container>
-            <Row>
-                 <Col >
-                        <div className={styles.buttonsdiv} sm={2} md={3} lg={4}>
-                             <button className={styles.buttons}>Flutter Developer</button>
-                             <button className={styles.buttons}>Flutter Developer</button>
-                             <button className={styles.buttons}>Flutter Developer</button>
-                             <button className={styles.buttons}>Flutter Developer</button>
-                         </div>                    
-                        <div className={styles.buttonsdiv} sm={2} md={3} lg={4}>
-                             <button className={styles.buttons}>Flutter Developer</button>
-                             <button className={styles.buttons}>Flutter Developer</button>
-                             <button className={styles.buttons}>Flutter Developer</button>
-                             <button className={styles.buttons}>Flutter Developer</button>
-                         </div>                    
-                    </Col>
+            <Row xs={2} sm={2} md={3} lg={4} className={styles.setmargin}>
+                 <Col sm={6} md={4} lg={3} className={styles.buttonsdiv}>
+                    <button className={styles.buttons}>Flutter Developer</button>
+                </Col>
+                 <Col sm={6} md={4} lg={3} className={styles.buttonsdiv}>
+                  
+                    <button className={styles.buttons}>Flutter Developer</button>          
+                </Col>
+                 <Col sm={5} md={4} lg={3} className={styles.buttonsdiv}>
+                  
+                    <button className={styles.buttons}>Flutter Developer</button>          
+                </Col>
+                 <Col sm={5} md={4} lg={3} className={styles.buttonsdiv}>
+                  
+                    <button className={styles.buttons}>Flutter Developer</button>          
+                </Col>
+                 <Col sm={5} md={4} lg={3} className={styles.buttonsdiv}>
+                  
+                    <button className={styles.buttons}>Flutter Developer</button>          
+                </Col>
+                 <Col sm={5} md={4} lg={3} className={styles.buttonsdiv}>
+                  
+                    <button className={styles.buttons}>Flutter Developer</button>          
+                </Col>
+                 <Col sm={5} md={4} lg={3} className={styles.buttonsdiv}>
+                  
+                    <button className={styles.buttons}>Flutter Developer</button>          
+                </Col>
+                 <Col sm={5} md={4} lg={3} className={styles.buttonsdiv}>
+                  
+                    <button className={styles.buttons}>Flutter Developer</button>          
+                </Col>
             </Row>
         </div>
 

@@ -40,8 +40,12 @@ const Ecommercepage =() =>{
                             <p className={styles.Ecomheading}>Shopify</p>
                         </div>      
                     </Col>
-                   
-                    
+                    {/* <Col lg={3} md={4} sm={6} xs={9}>
+                        <div className={styles.Ecomblock}>
+                        <StaticImage className={styles.Ecomstatic} src="../../../assets/images/e-commerce.png"></StaticImage>
+                            <p className={styles.Ecomheading}>Shopify</p>
+                        </div>      
+                    </Col> */} 
                 </Row>
             </div>           
         </>

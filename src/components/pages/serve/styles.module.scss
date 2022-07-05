@@ -4,8 +4,29 @@
 }
 .mainSblock{
     margin: 0px;
-    justify-content:space-evenly;
+    justify-content:space-around;
+   
   
+}
+.ViewSbutton1{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: $txt-white;
+     width: 32%;
+    // margin-left: 37.5%;
+    background: $gray;
+    border: none;
+    border-radius: 10px $gray;
+}
+.btnSDiv{
+    text-align:center;
+     padding-top: 30px;
+}
+.cardpadding{
+    padding: 10px;
 }
 
 .Sblock{
@@ -50,8 +71,7 @@ line-height: 63px;
 text-align: center;
 color: $txt-black;
 }
-.map{
-    
+.map{  
 // font-family: 'Roboto';
 font-style: normal;
 font-weight: 300;
@@ -67,32 +87,33 @@ color: $txt-sandstone;
 }
 .card{
         width: 11rem;
-        background: #F1F1F1;
-        font-family: 'Inter';
+        background: $offwhite;
+        font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
         font-size: 22px;
         line-height: 29px;
         text-align: center;
         color: $txt-black;
+        margin: auto;      
 }
 .cardPic{
     padding: 20px;
 }
-.request{
-    position: relative;
-    background: $gray;
-    border-radius: 5px;
-    width: 24%;
-    // font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 35px;
-    left: 38%;
-    top: 40px;
-    bottom: 40px;
-    text-align: center;
-    justify-content: center;
-    color: $txt-white;
-}
+// .request{
+//     position: relative;
+//     background: $gray;
+//     border-radius: 5px;
+//     width: 24%;
+//     // font-family: 'Roboto';
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 24px;
+//     line-height: 35px;
+//     left: 38%;
+//     top: 40px;
+//     bottom: 40px;
+//     text-align: center;
+//     justify-content: center;
+//     color: $txt-white;
+// }

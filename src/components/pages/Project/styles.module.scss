@@ -1,0 +1,150 @@
+@import "../../../scss/variables.scss";
+
+.projectOuterdiv{
+    background-color: $mild-blue;
+}
+.ProjectHeding{
+    // font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    color: #14264A;
+    padding-top: 50px;
+}
+.all{   
+background: #FFFFFF;
+border: 1px solid #E5E5E5;
+border-radius: 50px;
+width: 100px;
+padding: 2px;
+text-align: center;
+margin: 10px;
+}
+.flexdiv{
+justify-content: center;
+display: flex;
+padding-bottom: 50px;
+padding-top: 50px;
+}
+.cardOuterRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.carddiv{
+    background-color: $pink;
+    width: 50%;
+}
+.carddiv1{
+    background-color: $purple;
+    width: 50%;
+}
+.carddiv2{
+    background-color: $blue;
+    width: 50%;
+}
+.carddiv3{
+    background-color: $cyan;
+    width: 50%;
+}
+.carddiv4{
+    background-color: $caramel;
+    width: 50%;
+}
+.carddiv5{
+    background-color: $primary;
+    width: 50%;
+}
+.carddiv6{
+    background-color: $gray;
+    width: 50%;
+}
+.carddiv7{
+    background-color: $txt-sandstone;
+    width: 50%;
+}
+.projectname{
+    // font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    color: $txt-white;
+    // padding: 20px;
+}
+.category{
+    // font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 32px;
+line-height: 38px;
+text-align: center;
+color: $txt-white;
+padding-top: 50px;
+}
+
+.button{
+    // font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 38px;
+    text-align: center;
+    color: $txt-white;
+    border: none;
+    width: 50%;
+    background: none;
+    border: 1px solid white;
+    margin-bottom: 40px;
+  
+}
+.imgcard{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.divvv{
+    text-align:center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+@media(max-width:576px) {
+    .cardOuterRow{
+        flex-direction: column;
+    }
+    .carddiv{
+        background-color: $pink;
+        width: 100%;
+    }
+    .carddiv1{
+        background-color: $purple;
+        width: 100%;
+    }
+    .carddiv2{
+        background-color: $blue;
+        width: 100%;
+    }
+    .carddiv3{
+        background-color: $cyan;
+        width: 100%;
+    }
+    .carddiv4{
+        background-color: $caramel;
+        width: 100%;
+    }
+    .carddiv5{
+        background-color: $primary;
+        width: 100%;
+    }
+    .carddiv6{
+        background-color: $gray;
+        width: 100%;
+    }
+    .carddiv7{
+        background-color: $txt-sandstone;
+        width: 100%;
+    }
+}
