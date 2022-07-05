@@ -1,9 +1,10 @@
 @import "../../../scss/variables.scss";
-.main{
+.Choosemain{
     position: relative;
     margin-top: 75px;
-    height: 700px;
-    background: $gray;   
+    // height: 700px;
+    background: $gray; 
+    padding-bottom: 40px;  
 }
 .convert{
     //    font-family: 'Roboto';
@@ -30,18 +31,19 @@ color: $caramel;
     // font-family: 'Roboto';
 font-style: normal;
 font-weight: 300;
-font-size: 28px;
+font-size: 26px;
 line-height: 38px;
 text-align: center;
 color: $txt-white;
-margin: 35px 62px;
+padding-top: 25px;
+// margin: 35px 62px;
 }
 .paragraph2{
     font-style: normal;
 font-weight: 300;
-font-size: 28px;
+font-size: 26px;
 line-height: 38px;
 text-align: center;
 color: $txt-white;
-margin: 0px 62px;
+// margin: 0px 62px;
 }

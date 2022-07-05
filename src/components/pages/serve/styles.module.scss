@@ -1,13 +1,42 @@
 @import "../../../scss/variables.scss";
 .serve{
-    position: relative;
+    // position: relative;
 }
+.mainSblock{
+    margin: 0px;
+    justify-content:space-evenly;
+  
+}
+
+.Sblock{
+       height: 280px;
+       margin: 10px;
+    //    display: flex;
+       flex-wrap: wrap;
+       justify-content:center ;
+       align-items: center;
+       flex-direction: column;
+       margin-top: 20px;
+       background-color: $offwhite;
+}
+// .Static{
+//     height: 100px;
+//     margin-top: 10px;
+//     // padding: 20px;
+//     text-align: center;
+// }
+.Sheading{
+    text-align: center;
+    padding-top: 25px;
+}
+
+
 .services{
  margin-top: 30px;   
 // font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
-font-size: 40px;
+font-size: 30px;
 line-height: 47px;
 text-align: center;
 color: $txt-black;
@@ -16,7 +45,7 @@ color: $txt-black;
     // font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
-font-size: 54px;
+font-size: 44px;
 line-height: 63px;
 text-align: center;
 color: $txt-black;
@@ -26,7 +55,7 @@ color: $txt-black;
 // font-family: 'Roboto';
 font-style: normal;
 font-weight: 300;
-font-size: 28px;
+font-size: 26px;
 line-height: 38px;
 text-align: center;
 color: $txt-sandstone;
@@ -38,7 +67,6 @@ color: $txt-sandstone;
 }
 .card{
         width: 11rem;
-        
         background: #F1F1F1;
         font-family: 'Inter';
         font-style: normal;

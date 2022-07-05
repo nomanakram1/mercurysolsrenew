@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Welcome from "components/pages/welcome"
 import Servicepage from "components/pages/serve"
 import ChooseUspage from "components/pages/ChooseUs"
+import Customepage from "components/pages/Custome"
 
 const Home = () => {
 	return (
@@ -20,6 +21,7 @@ const Home = () => {
 					<Welcome></Welcome>
 					<Servicepage></Servicepage>
 					<ChooseUspage></ChooseUspage>
+					<Customepage></Customepage>
 
 			</LayoutWrapper>
 		</>

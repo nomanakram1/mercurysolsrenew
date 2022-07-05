@@ -1,0 +1,87 @@
+@import "../../../scss/variables.scss";
+
+.UserExp{
+    margin: 0px;
+    justify-content:center; 
+}
+.mainUserExp{
+    margin: 0px;
+    justify-content:center;
+    // margin:10px;
+    padding-bottom: 50px;
+}
+.mainUserExp1{
+    margin: 0px;
+    justify-content:center;
+    // margin:10px;
+    // padding-bottom: 50px;
+}
+
+.mainExprow{
+    background-color: $primary;
+    
+}
+.UserExp_heading{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+    // padding-top: 30px;
+    padding-top: 50px;
+    color: $txt-white;
+}
+.UserExpParagraph{
+    //  font-family: 'Roboto';
+     font-style: normal;
+     font-weight: 300;
+     font-size: 22px;
+     line-height: 28px;
+     text-align: start;
+     color: $txt-white;
+     padding: 20px;
+     margin-top: 43px;
+ }
+.UserExppic{
+    text-align: center;
+   padding-bottom: 20px;
+   padding: 30px;
+
+    
+}
+// .picststic{
+//     // margin-top: -15px;
+// }
+.UserExptool{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: start;
+    color: $txt-white;
+ // padding: 20px;
+ margin-left: 15px;
+}
+.UserExpblock{
+    // width: 18%;
+    height: 220px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center ;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    // padding: 10px;
+    background-color: $offwhite;
+}
+.UserExpstatic{
+    height: 100px;
+    margin-top: 10px;
+    // padding: 20px;
+    text-align: center;
+}
+.UserExpHeading{
+    text-align: center;
+    padding-top: 25px;
+}

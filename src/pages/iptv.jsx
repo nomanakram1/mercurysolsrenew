@@ -7,11 +7,9 @@ const Iptvpage = () => {
 	return (
 		<>
 			<LayoutWrapper>
-				<Lookingpage></Lookingpage>
+			<Lookingpage></Lookingpage>
 			<Container>
-				<h2>Iptv page works...</h2>
 				<Formpage></Formpage>
-				
 			</Container>
 		</LayoutWrapper>
 		</>
