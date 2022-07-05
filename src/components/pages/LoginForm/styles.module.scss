@@ -1,3 +1,4 @@
+@import "../../../scss/variables.scss";
 .lFMain{
     display:flex;
     justify-content: center;
@@ -18,7 +19,7 @@
         font-weight: 500;
         font-size: 54px;
         text-align: center;
-        color: #3E5E7E;
+        color: $gray;
         text-align:center;
     }
     .lFformItem{
@@ -26,7 +27,7 @@
         label{
             font-weight: 300;
             font-size: 24px;
-            color: #000000;
+            color: $txt-black;
         }
     }
     .lFinput{
@@ -35,7 +36,7 @@
     }
     input{
         border:none;
-        border-bottom:1px solid #928F8F;
+        border-bottom:1px solid $border-clr;
         background-color:transparent;
     }
     input:focus-visible {
@@ -45,14 +46,14 @@
         margin-top:50px;
     }
     .lFbtn{
-        background: #3E5E7E;
+        background: $gray;
         border-radius: 5px;
         border:none;
         width:100%;
         font-weight: 400;
         font-size: 30px;
         text-align: center;
-        color: #FFFFFF;
+        color: $txt-white;
         padding:6px 0;
         text-align: center;
     }

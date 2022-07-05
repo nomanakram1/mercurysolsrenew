@@ -1,29 +1,30 @@
+@import "../../../scss/variables.scss";
 .icMain{
-    background: #FFFFFF;
-    border: 1px solid #928F8F;
+    background: $txt-white;
+    border: 1px solid $txt-sandstone;
     border-radius: 5px;
     padding:30px;
     margin:50px 0;
     .icTitle{
         font-weight: 700;
         font-size: 28px;
-        color: #000000;
+        color: $txt-black;
         margin:10px 0;
     }
     .icExp{
         font-weight: 300;
         font-size: 19px;
-        color: #000000;
+        color: $txt-black;
         margin:10px 0;
     }
     .icDescHeading{
-        background: #FF6D6B;
+        background: $pink;
         max-width: 275px;
         height: 33px;
         font-weight: 400;
         font-size: 28px;
         text-align: center;
-        color: #FFFFFF;
+        color: $txt-white;
         padding-bottom: 6px;
         display: flex;
         align-items: center;
@@ -36,7 +37,7 @@
     .icListItem{
         font-weight: 400;
         font-size: 22px;
-        color: #000000;
+        color: $txt-black;
         margin:10px 0;
     }
     .icBar{
@@ -54,12 +55,12 @@
     .icBarTxt{
         font-weight: 500;
         font-size: 24px;
-        color: #FF6D6B;
+        color: $pink;
     }
     .icBarDescTxt{
         font-weight: 500;
         font-size:24px;
-        color: #323232;
+        color: $txt-sandstone;
     }
     .icBtns{
         margin:20px 0 10px 0;
@@ -69,7 +70,7 @@
         align-items:center;
     }
     .icDeleteBtn{
-        background: #FF6D6B;
+        background: $pink;
         border-radius: 5px;
         padding:5px 25px;
         border:none;
@@ -77,18 +78,17 @@
         font-weight: 400;
         font-size: 20px;
         text-align: center;
-        color: #FFFFFF;
+        color: $txt-white;
     }
     .icUpdateBtn{
-        background: #04A8F5;
+        background: $blue;
         border-radius: 5px;
         padding:5px 25px;
         border:none;
-        color:#FFFFFF;
+        color:$txt-white;
         font-weight: 400;
         font-size: 20px;
         text-align: center;
-        color: #FFFFFF;
     }
 }
 @media(max-width:767px){
