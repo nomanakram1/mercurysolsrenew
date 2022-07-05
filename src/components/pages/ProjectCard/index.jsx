@@ -1,10 +1,15 @@
 import React,{useState} from "react";
-import {Popconfirm,Container,Row,Col,Button,Modal} from "react-bootstrap";
+import {Popconfirm,Container,Row,Col,Modal} from "react-bootstrap";
 import {Form, Input} from "antd";
 import styles from './styles.scss';
 import { StaticImage } from "gatsby-plugin-image"
-import {UpdateModal} from "../UpdateModal"
+import 'antd/dist/antd.css';
+import { UploadOutlined } from '@ant-design/icons';
+import { Button, Upload } from 'antd';
+// import {UpdateModal} from "../UpdateModal"
+
 const ProjectCard=()=>{
+    const [imageList,setImageList]=useState([]);
     const [showModal,setShowModal]=useState(false);
     const [showConfirm,setShowConfirm]=useState(false);
     const handleModalShow=()=>{
@@ -19,6 +24,25 @@ const ProjectCard=()=>{
     const handleCloseConfirm=()=>{
         setShowConfirm(false);
     }
+    const fileList = [
+  {
+    uid: '-1',
+    name: 'xxx.png',
+    status: 'done',
+    url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+    thumbUrl: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+  },
+  {
+    uid: '-2',
+    name: 'yyy.png',
+    status: 'error',
+  },
+];
+const imageSelector=(e)=>{
+    // console.log();
+    // var a=URL.createObjectURL(e.target.files);
+    // console.log(a);
+}
 
     return(
         <>
@@ -103,15 +127,15 @@ const ProjectCard=()=>{
                                     centered
                                     show={showConfirm}
                                     onHide={handleCloseConfirm}
-                                    dialogClassName="m-0 mx-auto"
+                                    dialogClassName="m-0 mx-auto confirmModalMain"
                                     size='md'
                                 >
                                     <Modal.Dialog
                                         className="m-0"
                                         size='xl'>
-                                        <Modal.Header className="border-0 m-2" style={{}} closeButton>
+                                        <Modal.Header className="border-0 m-2 p-0 pt-2 pe-2" style={{}} closeButton>
                                         </Modal.Header>
-                                        <Modal.Body>
+                                        <Modal.Body className="py-0">
                                             <div className="d-flex justify-content-start align-item-center px-3">
                                                 <span>
                                                     <svg width="60" height="50" viewBox="0 0 60 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -121,7 +145,7 @@ const ProjectCard=()=>{
                                                 <span className="confirmTxt">Are You Sure You Want to delete it</span>
                                             </div>
                                         </Modal.Body>
-                                        <Modal.Footer className="border-0">
+                                        <Modal.Footer className="border-0 mt-5 mb-3">
                                         <div className="d-flex mb-2">
                                             <button
                                                 className="cancelConfirm"
@@ -163,56 +187,63 @@ const ProjectCard=()=>{
                                             <div className="fieldCol">
                                                 <div className="fieldColTitle"><span>Job Name</span></div>
                                                 <div className="fieldColInputMain">
-                                                    <Input className="fieldColInput" type='text'/>
+                                                    <input className="fieldColInput" type='text'/>
                                                 </div>
                                             </div>
                                             <div className="fieldCol2">
                                                 <div className="fieldColTitle"><span>Experience</span></div>
                                                 <div className="fieldColInputMain">
-                                                    <Input type='text' className="fieldColInput"/>
+                                                    <input type='text' className="fieldColInput"/>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="fieldRow">
                                                 <div className="fieldCol">
-                                                    <div className="fieldColTitle"><span>Key Skills</span></div>
+                                                    <div className="fieldColTitle"><span>Key Skilles</span></div>
                                                     <div className="fieldColInputMain">
-                                                        <Input type='text' className="fieldColInput"/>
+                                                        <input type='text' className="fieldColInput"/>
                                                     </div>
                                                 </div>
-                                            <div className="fieldCol2">
-                                                <div className="fieldColTitle"><span>Location</span></div>
-                                                    <div className="fieldColInputMain">
-                                                        <Input type='text' className="fieldColInput"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="fieldRow">
-                                                <div className="d-flex justify-content-start w-100">
-                                                    <div
-                                                        className="fieldColTitle"
-                                                        style={{
-                                                            // width:'110px',
-                                                            // color:'#323232',
-                                                            // fontWeight:'600',
-                                                            // fontSize:'16px'
-                                                        }}>
-                                                            <span>
-                                                               Description
-                                                            </span>
+                                                <div className="fieldCol2">
+                                                    <div className="fieldColTitle"><span>Location</span></div>
+                                                        <div className="fieldColInputMain">
+                                                            <input type='text' className="fieldColInput"/>
                                                         </div>
-                                                    <div className="w-100">
+                                                    </div>
+                                                </div>
+
+                                            <input type="file" onChange={imageSelector}/>
+
+                                                {/* <Upload
+      action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+      listType="picture"
+      defaultFileList={[...fileList]}
+      className="upload-list-inline"
+    >
+      <Button><UploadOutlined />{Upload}</Button>
+    </Upload> */}
+
+
+                                                <div className="fieldRow">
+                                                    <div className="textareaCol justify-content-between">
                                                         <div
-                                                            contentEditable="true"
-                                                            className="w-100"
-                                                            style={{
-                                                            // width:'300px',
-                                                            height:'120px',
-                                                            background:'#FFFFFF',
-                                                            border:'1px solid #323232',
-                                                            borderRadius:'5px',
-                                                        }}
-                                                    />
+                                                            className="fieldColTitle">
+                                                                <span>
+                                                                    Description
+                                                                </span>
+                                                            </div>
+                                                        <div className="textareaCont">
+                                                            <div
+                                                                contentEditable="true"
+                                                                className="textareaMain"
+                                                                style={{
+                                                                // width:'300px',
+                                                                height:'120px',
+                                                                background:'#FFFFFF',
+                                                                border:'1px solid #323232',
+                                                                borderRadius:'5px',
+                                                                }}
+                                                            />
                                                 </div>
                                             </div>
                                         </div>

@@ -1,6 +1,6 @@
 @import "../../../scss/variables.scss";
 .sbMain{
-    height:100%;
+    height:500px;
     background-color: $primary;
     padding:20px 0px;
     .sbItem{
@@ -19,5 +19,12 @@
         font-size: 28px;
         color: $txt-white;
         margin-left:30px;
+    }
+}
+@media(max-width:576px){
+    .sbMain{
+        height:20px;
+        background-color: $primary;
+        padding:20px 0px;
     }
 }

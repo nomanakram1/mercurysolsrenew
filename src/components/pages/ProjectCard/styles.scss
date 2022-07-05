@@ -241,17 +241,6 @@
     font-weight:600;
     font-size:18px;
 }
-.fieldColInputMain{
-    // width:300px;
-    // height:40px;
-    // background:#FFFFFF;
-    // // border:1px solid #323232;
-    // border-radius:5px;
-    // font-weight:600;
-    // font-size:16px;
-    // color:#323232;
-    // // py-2 px-3
-}
 .fieldColInput{
     width:300px;
     height:40px;
@@ -263,6 +252,17 @@
     color:#323232;
     padding:4px 10px;
     // py-2 px-3
+}
+.textareaCol{
+    display:flex;
+    justify-content:flex-start;
+    width:100%;
+}
+.textareaCont{
+    width:88%;
+}
+.textareaMain{
+    width:100%;
 }
 .cancelUpdate{
     width: 200px;
@@ -289,6 +289,9 @@
     font-size: 18px;
     text-align: center;
     color: #FFFFFF;
+}
+.confirmModalMain{
+    width:100%;
 }
 .confirmTxt{
     // font-family: 'Roboto';
@@ -323,6 +326,13 @@
     text-align: center;
     color: #FFFFFF;
 }
+input{
+    border-width:1px;
+    background-color:transparent;
+}
+input:focus-visible {
+    outline: none!important;
+}
 @media(max-width:1199px) and (min-width:992px){
     .modal-lg, .modal-xl {
         max-width: 880px!important;
@@ -341,13 +351,19 @@
     .fieldColInput{
         width:235px;
     }
+    .textareaCont{
+        width:83%;
+    }
 }
 @media(max-width:819px) and (min-width:768px){
     .modal-lg, .modal-xl {
-        max-width: 790px!important;
+        max-width: 720px!important;
     }
     .fieldColInput{
-        width:235px;
+        width:200px;
+    }
+    .textareaCont{
+        width:81%;
     }
 }
 @media(max-width:767px) and (min-width:576px){
@@ -360,20 +376,23 @@
         margin:0;
     }
     .fieldCol{
-        width:90%;
+        width:100%;
         justify-content: space-between;
         margin:10px 0;
     }
     .fieldCol2{
-        width:90%;
+        width:100%;
         justify-content: space-between;
         margin:10px 0;
     }
     .fieldColInput{
         width:235px;
     }
+    .textareaCont{
+        width:50%;
+    }
 }
-    @media(max-width:575px) and (min-width:0px){
+    @media(max-width:575px) and (min-width:410px){
         .modal-lg, .modal-xl {
             // max-width: 790px!important;
         }
@@ -395,5 +414,45 @@
         .fieldColInput{
             width:235px;
         }
-     
+        .textareaCont{
+            width:236px;
+        }
+        .confirmModalMain{
+            width:90%;
+        }
+}
+@media(max-width:409px) and (min-width:0px){
+    .modal-lg, .modal-xl {
+        // max-width: 790px!important;
+    }
+    .fieldRow{
+        flex-direction: column;
+        align-items:center;
+        margin:0;
+    }
+    .fieldCol{
+        width:100%;
+        justify-content: space-between;
+        margin:10px 0;
+    }
+    .fieldCol2{
+        width:100%;
+        justify-content: space-between;
+        margin:10px 0;
+    }
+    .fieldColInput {
+        width: 193px;
+    }
+    .textareaCont{
+        width:193px;
+    }
+    .confirmModalMain{
+        width:90%;
+    }
+    .cancelConfirm {
+        width: 125.55px;
+    }
+    .deleteConfirm{
+        width:125.55px;
+    }
 }
