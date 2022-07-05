@@ -1,0 +1,98 @@
+@import "../../../scss/variables.scss";
+.notesMain{
+    .notesSub{
+        position:relative;
+    }  
+    .notesTxtCont{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        background: #3E5E7E;
+        padding:100px 0 200px 0;
+    } 
+    .notesTxt{
+        // font-family: 'Inter';
+        // font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        // line-height: 58px;
+        color: #E5E5E5;
+    }
+    .notesBehind{
+        height:350px;
+        background-color: white;
+    }
+    .overlay{
+        position:absolute;
+        top:23%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap:wrap;
+
+    }
+    .keyCard{
+        width: 31.5%;
+        background:#F1F1F1;;
+    }
+    .keyCardHead{
+        font-weight: 600;
+        font-size: 28px;
+        text-align: center;
+        color: #E29E4E;
+        padding:30px 0 45px  0;
+    }
+    .keyCardTxt{
+        font-weight: 400;
+        font-size: 16px;
+        color: #000000;
+        padding:0 30px 15px 30px;
+    }
+    .noteMain{
+        background: #DDEBFF;
+        padding:90px 60px;
+    }
+    .noteSub{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    .noteHeading{
+        margin-bottom:40px;
+        font-weight: 500;
+        font-size: 40px;
+        text-align: center;
+        color: #02285B;
+    }
+    .noteHeadingTxt{
+        font-weight: 300;
+        font-size: 29px;
+        text-align: center;
+        color: #323232;
+        text-align:center;
+    }
+}
+@media(max-width:1199px) and (min-width:992px){
+    .notesMain{
+        .keyCardTxt{
+            font-weight: 300;
+            font-size: 16px;
+            color: #000000;
+            padding:0 15px 10px 15px;
+        }
+    }
+}
+@media(max-width:991px) and (min-width:568px){
+    .notesMain{
+        .keyCardTxt{
+            font-weight: 300;
+            font-size: 16px;
+            color: #000000;
+            padding:0 15px 10px 15px;
+        }
+        .keyCard{
+            width: 45%;
+            margin-bottom:20px;
+        }
+    }
+}

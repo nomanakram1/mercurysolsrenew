@@ -6,7 +6,7 @@ const LoginForm=(props)=>{
 
     return(
         <>
-            <Container className={styles.abContainer}>
+            <Container style={{margin:'0!important'}} className={styles.abContainer}>
                 <div className={styles.abMain}>
                     <div className={styles.abHeading}>
                         <span className={styles.abHeadingTxt}>{props.title}</span>

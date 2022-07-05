@@ -54,6 +54,14 @@ const LayoutWrapper = ({ path,children }) => {
 						</div>
 					</div>
 				</>
+			}
+			{
+				
+				url.includes('career') && 
+				<>
+					<Header />
+							<div className={styles.content_wrapper}>{children}</div>
+				</>
 			}	
 			{/* {
 				<>
