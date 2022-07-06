@@ -1,0 +1,458 @@
+@import "../../../scss/variables.scss";
+.pcMain{
+    background: $txt-white;
+    border: 1px solid $border-clr;
+    border-radius: 5px;
+    padding:30px;
+    margin:50px 0;
+    .pcTitle{
+        font-weight: 700;
+        font-size: 28px;
+        color: $txt-black;
+        margin:10px 0;
+    }
+    .pcExp{
+        font-weight: 300;
+        font-size: 19px;
+        color: $txt-black;
+        margin:10px 0;
+    }
+    .pcDescHeading{
+        background: $pink;
+        max-width: 275px;
+        height: 33px;
+        font-weight: 400;
+        font-size: 28px;
+        text-align: center;
+        color: $txt-white;
+        padding-bottom: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:10px 0;
+    }
+    .pcListMain{
+        margin:25px 0;
+    }
+    .pcListItem{
+        font-weight: 400;
+        font-size: 22px;
+        color: $txt-black;
+        margin:10px 0;
+    }
+    .pcImgMain{
+        display:flex;
+        height:100%;
+        margin:20px 0;
+    }
+    .pcImg{
+        // width: 379px;
+        // height: 241px;
+    }
+    .pcBar{
+        background: #E5E5E5;
+        display:flex;
+        justify-self: start;
+        align-items:center;
+        margin-bottom:1px;
+        margin:10px 0;
+        padding:10px 8px;
+    }
+    .pcBarHead{
+        margin:0 13px;
+    }
+    .pcBarTxt{
+        font-weight: 500;
+        font-size: 24px;
+        color: $pink;
+    }
+    .pcBarTagMain{
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .pcBarTag{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 3px 25px;
+        margin:4px 8px;
+        background: $border-clr;
+        border-radius: 5px;
+    }
+    .pcBarDescTxt{
+        font-weight: 500;
+        font-size:21px;
+        text-align: center;
+        color: $txt-white;
+    }
+    .pcBtns{
+        margin:20px 0 10px 0;
+        display:flex;
+        justify-content: flex-end;
+        align-items:center;
+    }
+    .pcDeleteBtn{
+        background: $pink;
+        border-radius: 5px;
+        padding:5px 25px;
+        border:none;
+        margin-right:7px;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        color: $txt-white;
+    }
+    .pcUpdateBtn{
+        background: $blue;
+        border-radius: 5px;
+        padding:5px 25px;
+        border:none;
+        color:$txt-white;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+    }
+    .abc{
+        color:red!important;
+    }
+    .projectModal{
+        width:20%;
+    }
+}
+@media(max-width:991px){
+    .pcMain{
+        .pcBar{
+            padding:10px 5px;
+        }
+        .pcBarHead{
+            margin:0 9px;
+        }
+        .pcBarTag{
+            padding: 3px 17px;
+            margin:4px 4px;
+        }
+        .pcBarDescTxt{
+            font-size:17px;
+        }
+    }
+}
+@media(max-width:767px){
+    .pcMain{
+        padding:7px 14px;
+        margin:16px 0;
+        .pcTitle{
+            margin:7px 0;
+        }
+        .pcExp{
+            // font-size: 19px;
+            margin:7px 0;
+        }
+        .pcDescHeading{
+            // width: 275px;
+            // height: 33px;
+            // font-size: 28px;
+            margin:7px 0;
+        }
+        .pcListMain{
+            margin: 15px 0;
+        }
+        .pcListItem{
+            font-size: 18px;
+            margin: 7px 0;
+        }
+        .pcImgMain{
+            margin:10px 0!important;
+        }
+        .pcBar{
+            margin:7px 0;
+            padding:5px!important;
+        }
+        .pcBtns{
+            margin:15px 0 10px 0;
+            flex-wrap:wrap;
+        }
+        .pcBarTagMain{
+            flex-wrap:wrap;
+            justify-content: flex-end;
+        }
+    }
+}
+@media(max-width:576px){
+    .pcMain{
+        .pcDeleteBtn{
+            padding:5px 0px;
+            border:none;
+            margin-right:0px;
+            width:100%;
+            margin:5px 0;
+        }
+        .pcUpdateBtn{
+            // padding:5px 25px;
+            width:100%;
+        }
+        .pcImgMain{
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+        // .pcImg{
+        //     margin:10px 0px;
+        //     width: 250px;
+        //     // height: 241px;
+        // }
+    }
+}
+.rowMain{
+    margin:0!important;
+}
+.modal-content {
+    border:none;
+}
+.modalMain{
+    background: #FEFEFE;
+    border: 1px solid #000000;
+}
+.modalTitle{
+    font-weight: 600;
+    font-size: 20px;
+    color: #3D5A80;
+}
+.bodyMain{
+
+}
+.fieldRow{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+.fieldCol{
+    display:flex;
+    justify-content:flex-start;
+    width:50%;
+}
+.fieldCol2{
+    display:flex;
+    justify-content:flex-end;
+    width:50%;
+}
+.fieldColTitle{
+    width:130px;
+    color:#323232;
+    font-weight:600;
+    font-size:18px;
+}
+.fieldColInput{
+    width:300px;
+    height:40px;
+    background:#FFFFFF;
+    // border:1px solid #323232;
+    border-radius:5px;
+    font-weight:600;
+    font-size:16px;
+    color:#323232;
+    padding:4px 10px;
+    // py-2 px-3
+}
+.textareaCol{
+    display:flex;
+    justify-content:flex-start;
+    width:100%;
+}
+.textareaCont{
+    width:88%;
+}
+.textareaMain{
+    width:100%;
+}
+.cancelUpdate{
+    width: 200px;
+    height: 44px;
+    background: #928F8F;
+    border-radius: 5px;
+    border:none;
+    display:felx;
+    justify-content: center;
+    align-content:center;
+}
+.updateJob{
+    width: 200px;
+    height: 44px;
+    background: #04A8F5;
+    border-radius: 5px;
+    border:none;
+    display:felx;
+    justify-content: center;
+    align-content:center;
+}
+.updateJobTxt{
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.confirmModalMain{
+    width:100%;
+}
+.confirmTxt{
+    // font-family: 'Roboto';
+    // font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #FF0000;
+    margin-top:15px;
+    margin-left:5px;
+    border:none;
+}
+.cancelConfirm{
+    height: 40px;
+    width: 150.55px;
+    background: #928F8F;
+    border-radius: 5px;
+    border:none;
+    margin:0 10px;
+}
+.deleteConfirm{ 
+    width: 150px;
+    height: 40px;
+    background: #C92020;
+    border-radius: 5px;
+    border:none;
+    margin:0 10px;
+}
+.confirmBtnTxt{
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+input{
+    border-width:1px;
+    background-color:transparent;
+}
+input:focus-visible {
+    outline: none!important;
+}
+@media(max-width:1199px) and (min-width:992px){
+    .modal-lg, .modal-xl {
+        max-width: 880px!important;
+    }
+    .fieldColTitle{
+        width:110px;
+    }
+    .fieldColInput{
+        width:275px;
+    }
+}
+@media(max-width:991px) and (min-width:820px){
+    .modal-lg, .modal-xl {
+        max-width: 790px!important;
+    }
+    .fieldColInput{
+        width:235px;
+    }
+    .textareaCont{
+        width:83%;
+    }
+}
+@media(max-width:819px) and (min-width:768px){
+    .modal-lg, .modal-xl {
+        max-width: 720px!important;
+    }
+    .fieldColInput{
+        width:200px;
+    }
+    .textareaCont{
+        width:81%;
+    }
+}
+@media(max-width:767px) and (min-width:576px){
+    .modal-lg, .modal-xl {
+        // max-width: 790px!important;
+    }
+    .fieldRow{
+        flex-direction: column;
+        align-items:center;
+        margin:0;
+    }
+    .fieldCol{
+        width:100%;
+        justify-content: space-between;
+        margin:10px 0;
+    }
+    .fieldCol2{
+        width:100%;
+        justify-content: space-between;
+        margin:10px 0;
+    }
+    .fieldColInput{
+        width:235px;
+    }
+    .textareaCont{
+        width:50%;
+    }
+}
+    @media(max-width:575px) and (min-width:410px){
+        .modal-lg, .modal-xl {
+            // max-width: 790px!important;
+        }
+        .fieldRow{
+            flex-direction: column;
+            align-items:center;
+            margin:0;
+        }
+        .fieldCol{
+            width:100%;
+            justify-content: space-between;
+            margin:10px 0;
+        }
+        .fieldCol2{
+            width:100%;
+            justify-content: space-between;
+            margin:10px 0;
+        }
+        .fieldColInput{
+            width:235px;
+        }
+        .textareaCont{
+            width:236px;
+        }
+        .confirmModalMain{
+            width:90%;
+        }
+}
+@media(max-width:409px) and (min-width:0px){
+    .modal-lg, .modal-xl {
+        // max-width: 790px!important;
+    }
+    .fieldRow{
+        flex-direction: column;
+        align-items:center;
+        margin:0;
+    }
+    .fieldCol{
+        width:100%;
+        justify-content: space-between;
+        margin:10px 0;
+    }
+    .fieldCol2{
+        width:100%;
+        justify-content: space-between;
+        margin:10px 0;
+    }
+    .fieldColInput {
+        width: 193px;
+    }
+    .textareaCont{
+        width:193px;
+    }
+    .confirmModalMain{
+        width:90%;
+    }
+    .cancelConfirm {
+        width: 125.55px;
+    }
+    .deleteConfirm{
+        width:125.55px;
+    }
+}

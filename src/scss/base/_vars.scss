@@ -1,0 +1,42 @@
+@use "../base/utils";
+
+// Colors
+$primary: #02bfa6;
+$secondary: #5c597c;
+$success: #198754;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #0dcaf0;
+$light: #f8f9fa;
+$dark: #212529;
+
+$heading-text-color: $secondary;
+$body-text-color: $secondary;
+$nav-link-color: $secondary;
+$nav-link-hover-color: $primary;
+
+// Font weight
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+
+// Font size
+$hero-heading-font-size: utils.toRem(60);
+$section-heading-font-size: utils.toRem(32);
+$body-font-size: utils.toRem(16);
+$nav-link-font-size: utils.toRem(14);
+
+// Typography
+// $heading-font-family: "Outfit", system-ui, -apple-system, Arial, Helvetica, sans-serif;
+// $body-font-family: "Lato", system-ui, -apple-system, Arial, Helvetica, sans-serif;
+// $heading-font-weight: $font-weight-bold;
+// $hero-heading-font-weight: $font-weight-extra-bold;
+// $body-font-weight: $font-weight-regular;
+
+// Breakpoints
+$breakpoint_sm: 576px;
+$breakpoint_md: 768px;
+$breakpoint_lg: 992px;
+$breakpoint_xl: 1200px;
+$breakpoint_xxl: 1400px;

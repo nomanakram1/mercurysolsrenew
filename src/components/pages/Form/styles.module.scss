@@ -1,0 +1,31 @@
+@import "../../../scss/variables.scss";
+.get{
+    // font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 63px;
+    text-align: center;
+    color: $txt-black;
+    margin-top:60px;
+}
+.form_control{
+
+    border: hidden;
+    /* border-bottom: 1px solid black; */
+    border-radius: 0px;
+    border-bottom: 1px solid $border-clr;
+    width: 80%;
+}
+.button{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: $txt-white;
+    width: 25%;
+    margin-left: 37.5%;
+    background: $gray;
+    border-radius: 5px  $gray;
+}

@@ -1,0 +1,25 @@
+@use "scss/base/vars";
+
+@mixin display_xs() {
+	@media (max-width: vars.$breakpoint_sm) {
+		@content;
+	}
+}
+
+@mixin display_sm() {
+	@media (min-width: vars.$breakpoint_sm) {
+		@content;
+	}
+}
+
+@mixin display_md() {
+	@media (min-width: vars.$breakpoint_md) {
+		@content;
+	}
+}
+
+@mixin display_lg() {
+	@media (min-width: vars.$breakpoint_lg) {
+		@content;
+	}
+}

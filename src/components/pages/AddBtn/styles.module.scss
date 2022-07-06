@@ -1,0 +1,65 @@
+@import "../../../scss/variables.scss";
+.abMain{
+    background: $txt-white;
+    border: 1px solid #928F8F;
+    border-radius: 5px;
+    padding:8px 13px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    .abHeading{
+        margin-left:15px;
+    }
+    .abHeadingTxt{
+        font-family: 'Roboto sans-serif';
+        font-weight: 800;
+        font-size: 35px;
+        text-align: center;
+        color: $primary;
+    }
+    .abBtn{
+        // padding:0px 7px;
+        height:48px;
+        background: $cyan;
+        border-radius: 5px;
+        border:none;
+        padding:0 18px;
+    }
+    .abBtnIcon{
+        vertical-align: bottom;
+        margin-right:8px;
+        margin-left:4px;
+    }
+    .abBtnTxt{
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        color: $txt-white;
+    }
+}
+@media(max-width:575px){
+    .abMain{
+        padding:8px 8px!important;
+        .abHeading{
+            margin-left:7px;
+        }
+        .abBtn{
+            height:40x!important;
+            padding:0 7px!important;
+        }
+    }
+}
+@media(max-width:410px){
+    // .abContainer{
+    //     // padding:10px;
+    // }
+    .abMain{
+        flex-direction: column;
+        .abBtnMain{
+            width:100%;
+        }
+        .abBtn{
+            width:100%
+        }
+    }
+}

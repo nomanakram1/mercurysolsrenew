@@ -1,0 +1,47 @@
+@import "../../../scss/variables.scss";
+.main{
+    position: relative;
+    margin-top: 75px;
+    height: 700px;
+    background: $gray;   
+}
+.convert{
+    //    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 47px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    color: $txt-white;
+    }
+.choose{
+    // font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 54px;
+line-height: 63px;
+margin: 10px;
+text-align: center;
+color: $caramel;
+}
+.paragraph1{
+    // font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 28px;
+line-height: 38px;
+text-align: center;
+color: $txt-white;
+margin: 35px 62px;
+}
+.paragraph2{
+    font-style: normal;
+font-weight: 300;
+font-size: 28px;
+line-height: 38px;
+text-align: center;
+color: $txt-white;
+margin: 0px 62px;
+}

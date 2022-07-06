@@ -1,0 +1,14 @@
+@use "scss/base/utils";
+
+.content_wrapper {
+	// background-color: #ffffff;
+	padding-top: utils.toRem(50);
+	padding-bottom: utils.toRem(50);
+}
+@media(max-width:576px){
+	.content_wrapper {
+		// background-color: #ffffff;
+		padding-top: utils.toRem(15);
+		padding-bottom: utils.toRem(15);
+	}
+}

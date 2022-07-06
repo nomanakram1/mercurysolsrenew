@@ -1,0 +1,201 @@
+@import "../../../scss/variables.scss";
+.pcMain{
+    background: $txt-white;
+    border: 1px solid $border-clr;
+    border-radius: 5px;
+    padding:30px;
+    margin:50px 0;
+    .pcTitle{
+        font-weight: 700;
+        font-size: 28px;
+        color: $txt-black;
+        margin:10px 0;
+    }
+    .pcExp{
+        font-weight: 300;
+        font-size: 19px;
+        color: $txt-black;
+        margin:10px 0;
+    }
+    .pcDescHeading{
+        background: $pink;
+        max-width: 275px;
+        height: 33px;
+        font-weight: 400;
+        font-size: 28px;
+        text-align: center;
+        color: $txt-white;
+        padding-bottom: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:10px 0;
+    }
+    .pcListMain{
+        margin:25px 0;
+    }
+    .pcListItem{
+        font-weight: 400;
+        font-size: 22px;
+        color: $txt-black;
+        margin:10px 0;
+    }
+    .pcImgMain{
+        display:flex;
+        height:100%;
+        margin:20px 0;
+    }
+    .pcImg{
+        // width: 379px;
+        // height: 241px;
+    }
+    .pcBar{
+        background: #E5E5E5;
+        display:flex;
+        justify-self: start;
+        align-items:center;
+        margin-bottom:1px;
+        margin:10px 0;
+        padding:10px 8px;
+    }
+    .pcBarHead{
+        margin:0 13px;
+    }
+    .pcBarTxt{
+        font-weight: 500;
+        font-size: 24px;
+        color: $pink;
+    }
+    .pcBarTagMain{
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .pcBarTag{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 3px 25px;
+        margin:4px 8px;
+        background: $border-clr;
+        border-radius: 5px;
+    }
+    .pcBarDescTxt{
+        font-weight: 500;
+        font-size:21px;
+        text-align: center;
+        color: $txt-white;
+    }
+    .pcBtns{
+        margin:20px 0 10px 0;
+        display:flex;
+        justify-content: flex-end;
+        align-items:center;
+    }
+    .pcDeleteBtn{
+        background: $pink;
+        border-radius: 5px;
+        padding:5px 25px;
+        border:none;
+        margin-right:7px;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        color: $txt-white;
+    }
+    .pcUpdateBtn{
+        background: $blue;
+        border-radius: 5px;
+        padding:5px 25px;
+        border:none;
+        color:$txt-white;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+@media(max-width:991px){
+    .pcMain{
+        .pcBar{
+            padding:10px 5px;
+        }
+        .pcBarHead{
+            margin:0 9px;
+        }
+        .pcBarTag{
+            padding: 3px 17px;
+            margin:4px 4px;
+        }
+        .pcBarDescTxt{
+            font-size:17px;
+        }
+    }
+}
+@media(max-width:767px){
+    .pcMain{
+        padding:7px 14px;
+        margin:16px 0;
+        .pcTitle{
+            margin:7px 0;
+        }
+        .pcExp{
+            // font-size: 19px;
+            margin:7px 0;
+        }
+        .pcDescHeading{
+            // width: 275px;
+            // height: 33px;
+            // font-size: 28px;
+            margin:7px 0;
+        }
+        .pcListMain{
+            margin: 15px 0;
+        }
+        .pcListItem{
+            font-size: 18px;
+            margin: 7px 0;
+        }
+        .pcImgMain{
+            margin:10px 0!important;
+        }
+        .pcBar{
+            margin:7px 0;
+            padding:5px!important;
+        }
+        .pcBtns{
+            margin:15px 0 10px 0;
+            flex-wrap:wrap;
+        }
+        .pcBarTagMain{
+            flex-wrap:wrap;
+            justify-content: flex-end;
+        }
+    }
+}
+@media(max-width:576px){
+    .pcMain{
+        .pcDeleteBtn{
+            padding:5px 0px;
+            border:none;
+            margin-right:0px;
+            width:100%;
+            margin:5px 0;
+        }
+        .pcUpdateBtn{
+            // padding:5px 25px;
+            width:100%;
+        }
+        .pcImgMain{
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+        // .pcImg{
+        //     margin:10px 0px;
+        //     width: 250px;
+        //     // height: 241px;
+        // }
+    }
+}
+.rowMain{
+    margin:0!important;
+}

@@ -1,0 +1,61 @@
+@import "../../../scss/variables.scss";
+.lFMain{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    .lFSub{
+        // background: #F1F1F1;
+        border-radius: 10px;
+        width:500px;
+        padding:60px;
+    }
+    .lFClass{
+
+    }
+    .lFHeadingDiv{
+        margin-bottom:60px;
+    }
+    .lFHeading{
+        font-weight: 500;
+        font-size: 54px;
+        text-align: center;
+        color: $gray;
+        text-align:center;
+    }
+    .lFformItem{
+        margin-bottom:50px;
+        label{
+            font-weight: 300;
+            font-size: 24px;
+            color: $txt-black;
+        }
+    }
+    .lFinput{
+        margin-top:5px;
+        width:100%;
+    }
+    input{
+        border:none;
+        border-bottom:1px solid $border-clr;
+        background-color:transparent;
+    }
+    input:focus-visible {
+        outline: none!important;
+    }
+    .lFbtnDiv{
+        margin-top:50px;
+    }
+    .lFbtn{
+        background: $gray;
+        border-radius: 5px;
+        border:none;
+        width:100%;
+        font-weight: 400;
+        font-size: 30px;
+        text-align: center;
+        color: $txt-white;
+        padding:6px 0;
+        text-align: center;
+    }
+    
+}
