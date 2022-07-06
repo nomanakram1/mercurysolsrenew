@@ -1,0 +1,12 @@
+@use "../../../scss/base/variables";
+@use "../../../scss/mixins/common";
+
+.emailLink {
+	color: variables.$primary;
+	text-decoration: none;
+	@include common.ease();
+	&:hover {
+		color: variables.$primary;
+		border-bottom: 1px dashed variables.$primary;
+	}
+}

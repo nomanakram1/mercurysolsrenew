@@ -1,0 +1,158 @@
+@import "../../../scss/variables.scss";
+.icMain{
+    background: $txt-white;
+    border: 1px solid $txt-sandstone;
+    border-radius: 5px;
+    padding:30px;
+    margin:50px 0;
+    .icTitle{
+        font-weight: 700;
+        font-size: 28px;
+        color: $txt-black;
+        margin:10px 0;
+    }
+    .icExp{
+        font-weight: 300;
+        font-size: 19px;
+        color: $txt-black;
+        margin:10px 0;
+    }
+    .icDescHeading{
+        background: $pink;
+        max-width: 275px;
+        height: 33px;
+        font-weight: 400;
+        font-size: 28px;
+        text-align: center;
+        color: $txt-white;
+        padding-bottom: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:10px 0;
+    }
+    .icListMain{
+        margin:25px 0;
+    }
+    .icListItem{
+        font-weight: 400;
+        font-size: 22px;
+        color: $txt-black;
+        margin:10px 0;
+    }
+    .icBar{
+        background: #E5E5E5;
+        display:flex;
+        justify-self: start;
+        align-items:center;
+        margin-bottom:1px;
+        margin:10px 0;
+        padding:8px;
+    }
+    .icBarHead{
+        padding:0 13px;
+    }
+    .icBarTxt{
+        font-weight: 500;
+        font-size: 24px;
+        color: $pink;
+    }
+    .icBarDescTxt{
+        font-weight: 500;
+        font-size:24px;
+        color: $txt-sandstone;
+    }
+    .icBtns{
+        margin:20px 0 10px 0;
+        display:flex;
+        flex-direction:row;
+        justify-content: flex-end;
+        align-items:center;
+    }
+    .icDeleteBtn{
+        background: $pink;
+        border-radius: 5px;
+        padding:5px 25px;
+        border:none;
+        margin-right:7px;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        color: $txt-white;
+    }
+    .icUpdateBtn{
+        background: $blue;
+        border-radius: 5px;
+        padding:5px 25px;
+        border:none;
+        color:$txt-white;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+@media(max-width:767px){
+    .icMain{
+        padding:7px 14px;
+        margin:16px 0;
+        .icTitle{
+            margin:7px 0;
+        }
+        .icExp{
+            // font-size: 19px;
+            margin:7px 0;
+        }
+        .icDescHeading{
+            // width: 275px;
+            // height: 33px;
+            // font-size: 28px;
+            margin:7px 0;
+        }
+        .icListMain{
+            margin: 15px 0;
+        }
+        .icListItem{
+            font-size: 18px;
+            margin: 7px 0;
+        }
+        .icBar{
+            margin:7px 0;
+            padding:5px;
+        }
+        .icBtns{
+            margin:15px 0 10px 0;
+            flex-wrap:wrap;
+        }
+    }
+    @media(max-width:591px)and(min-width:576px){
+        .icMain{
+            .icDeleteBtn{
+                padding:5px 0px;
+                border:none;
+                margin-right:0px;
+                width:100%;
+                margin:5px 0;
+            }
+            .icUpdateBtn{
+                // padding:5px 25px;
+                width:100%;
+            }
+        }
+    }
+    @media(max-width:410px){
+        .icMain{
+            .icDeleteBtn{
+                padding:5px 0px;
+                border:none;
+                margin-right:0px;
+                width:100%;
+                margin:5px 0;
+            }
+            .icUpdateBtn{
+                // padding:5px 25px;
+                width:100%;
+            }
+        }
+    }
+}
+

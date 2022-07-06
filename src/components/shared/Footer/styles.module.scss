@@ -1,0 +1,54 @@
+@use "scss/base/vars";
+@use "scss/base/utils";
+
+.footer_link {
+	@include utils.ease();
+	color: inherit;
+	text-decoration: none;
+	&:hover {
+		border-bottom: 1px dashed vars.$primary;
+	}
+}
+
+.social_icon {
+	@include utils.ease();
+	cursor: pointer;
+	padding: 4px 7px 8px 7px;
+	border-radius: 50%;
+	background-color: transparent;
+	margin-right: 10px;
+	&:last-child {
+		margin-right: 0;
+	}
+	&:hover {
+		background-color: vars.$secondary;
+	}
+	svg {
+		fill: #ffffff;
+	}
+}
+
+.picc{
+	 color: white;
+	 margin: 4px;
+}
+.lists
+{
+	padding-left: 10px ;
+	font-Family: Roboto ;
+	font-style: normal; 
+	font-weight: 300 ;
+	font-size: 18px; 
+	line-height: 28px; 
+	text-align: start; 
+	color: white; 
+}
+.mercury{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 28px;
+	text-align: start;
+	color: #ffffff;
+}

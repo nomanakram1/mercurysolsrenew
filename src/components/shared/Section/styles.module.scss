@@ -1,0 +1,16 @@
+@use "scss/base/vars";
+@use "scss/mixins/resp";
+
+.section {
+	padding: 90px 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: scroll;
+	@include resp.display_xs() {
+		padding: 50px 0;
+	}
+	@include resp.display_md() {
+		padding: 70px 0;
+	}
+}

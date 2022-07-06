@@ -1,0 +1,6 @@
+@use "../../../scss/base/functions";
+
+.heroSubHeading {
+	font-size: functions.px-Rem(40);
+	margin-top: -10px;
+}
