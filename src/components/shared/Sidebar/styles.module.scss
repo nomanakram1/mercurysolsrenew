@@ -19,12 +19,19 @@
         font-size: 28px;
         color: $txt-white;
         margin-left:30px;
+        // width:100%;
+        display:block;
     }
 }
 @media(max-width:576px){
     .sbMain{
-        height:20px;
         background-color: $primary;
         padding:20px 0px;
+    }
+    .SidebarOpen{
+        height:241px;
+    }
+    .SidebarClose{
+        height:0px;
     }
 }

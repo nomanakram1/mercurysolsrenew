@@ -1,23 +1,100 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import { Popconfirm,Container,Row,Col,Button,Modal } from "react-bootstrap";
-import {Form, Input} from "antd";
+import {Form, Input,message} from "antd";
 import * as styles from './styles.module.scss';
-const InfoCard=()=>{
+import firebase from '../../../config/firebase';
+const InfoCard=(props)=>{
+    const [updateObj,setUpdateObj]=useState({});
     const [showModal,setShowModal]=useState(false);
     const [showConfirm,setShowConfirm]=useState(false);
+    const [tempDesc,setTempDesc]=useState(props.jobDescription.split('.'));
+    const [tempSkills,setTempSkills]=useState(props.jobKeySkills.split(','));
+    useEffect(()=>{
+        console.log(updateObj);
+    },[updateObj]);
+    function handleChange(val) {
+        props.onChange(val);
+    }
     const handleModalShow=()=>{
-      setShowModal(true);
+        setShowModal(true);
+        setUpdateObj({
+            recordId:props.recordId,
+            jobTitle:props.jobTitle,
+            jobExperience:props.jobExperience,
+            jobDescription:props.jobDescription,
+            jobKeySkills:props.jobKeySkills,
+            jobLocation:props.jobLocation,
+        })
+    }
+    const updateTitle = (e) => {
+        setUpdateObj(prevState => ({
+              ...prevState,
+              jobTitle:e.target.value,
+        })
+        )
+    }
+    const updateExperience = (e) => {
+        setUpdateObj(prevState => ({
+              ...prevState,
+              jobExperience:e.target.value,
+        })
+        )
+    }
+    const updateKeySkills = (e) => {
+        setUpdateObj(prevState => ({
+              ...prevState,
+              jobKeySkills:e.target.value,
+        })
+        )
+    }
+    const updateLocation = (e) => {
+        setUpdateObj(prevState => ({
+              ...prevState,
+              jobLocation:e.target.value,
+        })
+        )
+    }
+    const updateDescription = (e) => {
+        setUpdateObj(prevState => ({
+              ...prevState,
+              jobDescription:e.target.value,
+        })
+        )
+    }
+    const saveChanges=()=>{
+        
+        firebase.firestore().collection('jobs').doc(updateObj.recordId).update(updateObj).then(()=>{
+            handleChange(Date.now());
+            message.info('Record Updated');
+        }).catch(()=>{
+            message.info("Error Occured! Can't Update the Record");
+        });
+        setShowModal(false);
+        handleChange(Date.now());
+    }
+    const handleModalDelete=()=>{
+        firebase.firestore().collection('jobs').doc(props.recordId).delete().then(()=>{
+            handleChange(Date.now());
+            message.info('Record Deleted');
+        }).catch(()=>{
+            message.info("Error Occured! Can't Delete the Record");
+        });
+        setShowConfirm(false);
     }
     const handleShowConfirm=()=>{
         setShowConfirm(true);
     }
     const handleModalClose=()=>{
       setShowModal(false);
+      setUpdateObj({});
     }
     const handleCloseConfirm=()=>{
         setShowConfirm(false);
     }
-
+    console.log('temp data-->',props.jobDescription);
+    useEffect(()=>{
+        console.log(tempDesc,tempSkills);
+    },[tempDesc,tempSkills])
     return(
         <>
         
@@ -26,20 +103,17 @@ const InfoCard=()=>{
                     <Col>
                         <div className={styles.icMain}>
                             <div>
-                                <h1 className={styles.icTitle}>Node.Js Developer</h1>
-                                <h5 className={styles.icExp}>2-5 Years - Experience</h5>
+                                <h1 className={styles.icTitle}>{props.jobTitle}</h1>
+                                <h5 className={styles.icExp}>{props.jobExperience}</h5>
                                 <h5 className={styles.icDescHeading}>Job Description</h5>
                             </div>
                             <div className={styles.icListMain}>
-                                <ul>
-                                    <li className={styles.icListItem}>Knows and have implemented Serverless Architecture</li>
-                                    <li className={styles.icListItem}>Worked with NoSQL and AWS Dynamo DB (optional)</li>
-                                    <li className={styles.icListItem}>Knows and implemented CI/CD</li>
-                                    <li className={styles.icListItem}>Knows and implemented CI/CD</li>
-                                    <li className={styles.icListItem}>Other backend expectations like strong DB skills and optimization of code etc</li>
-                                    <li className={styles.icListItem}>Good foundations on OOPS</li>
-                                    <li className={styles.icListItem}>Knowledge of PHP frameworks like Codeigniter, CakePHP, Laravel</li>
-                                    <li className={styles.icListItem}>Good Hands on Server Knowledge</li>
+                                <ul>{tempDesc.length>0 &&
+                                        tempDesc.map(item=>{
+                                        return(
+                                             <li className={styles.icListItem}>{item}</li>
+                                        )})
+                                    }
                                 </ul>
                             </div>
                             <div className={styles.icBar}>
@@ -47,7 +121,12 @@ const InfoCard=()=>{
                                     <span  className={styles.icBarTxt}>Key Skills:</span>
                                 </div>
                                 <div>
-                                    <span  className={styles.icBarDescTxt}>Node Js, CI/CD, Typescript, NoSql</span>
+                                    <span  className={styles.icBarDescTxt}>
+                                        {tempSkills.length>0 &&
+                                         tempSkills.map(item=>{
+                                            return(item+', ')
+                                        })}
+                                    </span>
                                 </div>
                             </div>
                             <div className={styles.icBar}>
@@ -55,7 +134,7 @@ const InfoCard=()=>{
                                     <span  className={styles.icBarTxt}>Job Location:</span>
                                 </div>
                                 <div>
-                                    <span  className={styles.icBarDescTxt}>Rahim Yar Khan</span>
+                                    <span  className={styles.icBarDescTxt}>{props.jobLocation}</span>
                                 </div>
                             </div>
                             <div className={styles.icBtns}>
@@ -87,11 +166,11 @@ const InfoCard=()=>{
                                         <div className="d-flex mb-2">
                                             <button
                                                 className="cancelConfirm"
-                                                onClick={handleModalClose}
+                                                onClick={handleCloseConfirm}
                                             >
                                                 <span className="confirmBtnTxt mx-4">Cancel</span>
                                             </button>
-                                            <button
+                                            <button onClick={handleModalDelete}
                                                 className="deleteConfirm"
                                             >
                                                 <span className="confirmBtnTxt mx-4">Delete</span>
@@ -125,13 +204,13 @@ const InfoCard=()=>{
                                             <div className="fieldCol">
                                                 <div className="fieldColTitle"><span>Job Name</span></div>
                                                 <div className="fieldColInputMain">
-                                                    <input className="fieldColInput" type='text'/>
+                                                    <input className="fieldColInput" type='text' defaultValue={updateObj.jobTitle} onChange={updateTitle}/>
                                                 </div>
                                             </div>
                                             <div className="fieldCol2">
                                                 <div className="fieldColTitle"><span>Experience</span></div>
                                                 <div className="fieldColInputMain">
-                                                    <input type='text' className="fieldColInput"/>
+                                                    <input type='text' className="fieldColInput"  defaultValue={updateObj.jobExperience} onChange={updateExperience}/>
                                                 </div>
                                             </div>
                                         </div>
@@ -139,13 +218,13 @@ const InfoCard=()=>{
                                                 <div className="fieldCol">
                                                     <div className="fieldColTitle"><span>Key Skills</span></div>
                                                     <div className="fieldColInputMain">
-                                                        <input type='text' className="fieldColInput"/>
+                                                        <input type='text' className="fieldColInput"  defaultValue={updateObj.jobKeySkills}  onChange={updateKeySkills}/>
                                                     </div>
                                                 </div>
                                             <div className="fieldCol2">
                                                 <div className="fieldColTitle"><span>Location</span></div>
                                                     <div className="fieldColInputMain">
-                                                        <input type='text' className="fieldColInput"/>
+                                                        <input type='text' className="fieldColInput"  defaultValue={updateObj.jobLocation}  onChange={updateLocation}/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -158,17 +237,20 @@ const InfoCard=()=>{
                                                             </span>
                                                         </div>
                                                     <div className="textareaCont">
-                                                        <div
-                                                            contentEditable="true"
+                                                        <textarea
+                                                            // contentEditable="true"
                                                             className="textareaMain"
                                                             style={{
-                                                            // width:'300px',
                                                             height:'120px',
                                                             background:'#FFFFFF',
                                                             border:'1px solid #323232',
                                                             borderRadius:'5px',
+                                                            overflowY:'scroll'
                                                         }}
-                                                    />
+                                                        value={updateObj.jobDescription}
+                                                        onChange={updateDescription}
+                                                    >
+                                                    </textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -177,33 +259,15 @@ const InfoCard=()=>{
                                 <Modal.Footer className="border-0">
                                     <button
                                         className="cancelUpdate"
-                                        // className="border-0 py-2 px-5"
-                                        style={{
-                                        // background:'#928F8F',
-                                        // borderRadius:'5px'
-                                        }}
                                         onClick={handleModalClose}
                                     >
-                                            <span className="updateJobTxt mx-4"
-                                            style={{
-                                                // fontWeight:'400',
-                                                // fontSize:'16px',
-                                                // textAlign:'center',
-                                                // color:'#FFFFFF',
-                                            }}
-                                            >
+                                            <span className="updateJobTxt mx-4">
                                                 Cancel
                                             </span>
                                         </button>
-                                    <button
-                                        className="updateJob"
-                                        // className="border-0 py-2 px-4"
-                                        style={{
-                                        // background:'#04A8F5',
-                                        // borderRadius:'5px'
-                                    }}
-                                    >
+                                    <button className="updateJob">
                                         <span className="updateJobTxt mx-4"
+                                            onClick={saveChanges}
                                             style={{
                                                 // fontWeight:'400',
                                                 // fontSize:'16px',

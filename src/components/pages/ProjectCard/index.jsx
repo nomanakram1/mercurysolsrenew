@@ -1,19 +1,37 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import {Popconfirm,Container,Row,Col,Modal} from "react-bootstrap";
-import {Form, Input} from "antd";
+import {Form, Input,message} from "antd";
 import styles from './styles.scss';
 import { StaticImage } from "gatsby-plugin-image"
 import 'antd/dist/antd.css';
 import { UploadOutlined } from '@ant-design/icons';
 import { Button, Upload } from 'antd';
+import firebase from '../../../config/firebase';
 // import {UpdateModal} from "../UpdateModal"
 
-const ProjectCard=()=>{
+const ProjectCard=(props)=>{
+    console.log(props.projectDescription);
+    const [loading,setLoading]=useState(true);
     const [imageList,setImageList]=useState([]);
     const [showModal,setShowModal]=useState(false);
     const [showConfirm,setShowConfirm]=useState(false);
+    const [updateObj,setUpdateObj]=useState({});
+    const [tempDesc,setTempDesc]=useState(props.projectDescription.split('.'));
+    const [tempTags,setTempTags]=useState(props.projectTags.split(','));
+    const [tempTech,setTempTech]=useState(props.projectTechnology.split(','));
     const handleModalShow=()=>{
       setShowModal(true);
+      setUpdateObj({
+        recordId:props.recordId,
+        projectTitle:props.projectTitle,
+        projectCategory:props.projectCategory,
+        projectDescription:props.projectDescription,
+        projectTags:props.projectTags,
+        projectTechnology:props.projectTechnology,
+    })
+    }
+    function handleChange(val) {
+        props.onChange(val);
     }
     const handleShowConfirm=()=>{
         setShowConfirm(true);
@@ -24,6 +42,62 @@ const ProjectCard=()=>{
     const handleCloseConfirm=()=>{
         setShowConfirm(false);
     }
+    const updateHandler=()=>{
+        firebase.firestore().collection('projects').doc(updateObj.recordId).update(updateObj).then(()=>{
+            handleChange(Date.now());
+            message.info('Record Updated');
+        }).catch(()=>{
+            message.info("Error Occured! Can't Update the Record");
+        });
+        setShowModal(false);
+        handleChange(Date.now());
+    }
+    const handleModalDelete=()=>{
+        setShowConfirm(false);
+        firebase.firestore().collection('projects').doc(props.recordId).delete().then(()=>{
+            handleChange(Date.now());
+            message.info('Record Deleted');
+        }).catch(()=>{
+            message.info("Error Occured! Can't Delete the Record");
+        });
+    }
+    const updateTitle = (e) => {
+        setUpdateObj(prevState => ({
+              ...prevState,
+              projectTitle:e.target.value,
+        })
+        )
+    }
+    const updateCategory = (e) => {
+        setUpdateObj(prevState => ({
+              ...prevState,
+              projectCategory:e.target.value,
+        })
+        )
+    }
+    const updateTags = (e) => {
+        setUpdateObj(prevState => ({
+              ...prevState,
+              projectTags:e.target.value,
+        })
+        )
+    }
+    const updateTechnology = (e) => {
+        setUpdateObj(prevState => ({
+              ...prevState,
+              projectTechnology:e.target.value,
+        })
+        )
+    }
+    const updateDescription = (e) => {
+        setUpdateObj(prevState => ({
+              ...prevState,
+              projectDescription:e.target.value,
+        })
+        )
+    }
+    console.log(tempDesc);
+    useEffect(()=>{console.log(updateObj)},[updateObj])
     const fileList = [
   {
     uid: '-1',
@@ -43,6 +117,12 @@ const imageSelector=(e)=>{
     // var a=URL.createObjectURL(e.target.files);
     // console.log(a);
 }
+tempDesc.map(item=>{
+    if(item.lenght>0){
+        console.log(item);
+        return({item})
+    }
+})
 
     return(
         <>
@@ -52,8 +132,8 @@ const imageSelector=(e)=>{
                     <Col className="p-0">
                         <div className="pcMain">
                             <div>
-                                <h1 className="pcTitle">Project Name</h1>
-                                <h5 className="pcExp">Category</h5>
+                                <h1 className="pcTitle">{props.projectTitle}</h1>
+                                <h5 className="pcExp">{props.projectCategory}</h5>
                                 <h5 className="pcDescHeading">Description</h5>
                             </div>
                             <div className="pcListMain">
@@ -63,10 +143,17 @@ const imageSelector=(e)=>{
                             </div>
                             <div className="pcListMain">
                                 <ul>
-                                    <li className="pcListItem">Worked with NoSQL and AWS Dynamo DB (optional)</li>
+                                {tempDesc.map(item=>{
+                                        if(item.length>0){
+                                        return(
+                                            <li className="pcListItem">{item}</li>
+                                        )
+                                        }
+                                    })}
+                                    {/* <li className="pcListItem">Worked with NoSQL and AWS Dynamo DB (optional)</li>
                                     <li className="pcListItem">Knows and implemented CI/CD</li>
                                     <li className="pcListItem">Other backend expectations like strong DB skills and optimization of code etc</li>
-                                    <li className="pcListItem">Experience in Design patterns</li>
+                                    <li className="pcListItem">Experience in Design patterns</li> */}
                                 </ul>
                             </div>
                             <div className="pcListMain">
@@ -86,39 +173,37 @@ const imageSelector=(e)=>{
                                 <div className="pcBarHead">
                                     <span  className="pcBarTxt">Tags:</span>
                                 </div>
-                                <div className="pcBarTagMain">
-                                    <div className="pcBarTag">
-                                        <span  className="pcBarDescTxt">Node Js</span>
-                                    </div>
-                                    <div className="pcBarTag">
-                                        <span  className="pcBarDescTxt">Node Js</span>
-                                    </div>
-                                    <div className="pcBarTag">
-                                        <span  className="pcBarDescTxt">Node Js</span>
-                                    </div>
-                                    <div className="pcBarTag">
-                                        <span  className="pcBarDescTxt">Node Js</span>
-                                    </div>
-                                </div>
+                                
+                                    {tempTags.map(item=>{
+                                        if(item.length>0){
+                                        return(
+                                            <div className="pcBarTagMain">
+                                                <div className="pcBarTag">
+                                                    <span  className="pcBarDescTxt">{item}</span>
+                                                </div>
+                                            </div>
+                                        )
+                                        }
+                                    })}
+                               
                             </div>
                             <div className="pcBar">
                                 <div className="pcBarHead">
                                     <span  className="pcBarTxt">Technology</span>
                                 </div>
-                                <div className="pcBarTagMain">
-                                    <div className="pcBarTag">
-                                        <span  className="pcBarDescTxt">Node Js</span>
-                                    </div>
-                                    <div className="pcBarTag">
-                                        <span  className="pcBarDescTxt">Node Js</span>
-                                    </div>
-                                    <div className="pcBarTag">
-                                        <span  className="pcBarDescTxt">Node Js</span>
-                                    </div>
-                                    <div className="pcBarTag">
-                                        <span  className="pcBarDescTxt">Node Js</span>
-                                    </div>
-                                </div>
+                                
+                                    {tempTech.map(item=>{
+                                        if(item.length>0){
+                                        return(
+                                            <div className="pcBarTagMain">
+                                                <div className="pcBarTag">
+                                                    <span className="pcBarDescTxt">{item}</span>
+                                                </div>
+                                            </div>
+                                            )
+                                        }
+                                        })}
+                                
                             </div>
                             <div className="pcBtns">
                                 <button onClick={handleShowConfirm} className="pcDeleteBtn">Delete Job</button>
@@ -155,6 +240,7 @@ const imageSelector=(e)=>{
                                             </button>
                                             <button
                                                 className="deleteConfirm"
+                                                onClick={handleModalDelete}
                                             >
                                                 <span className="confirmBtnTxt mx-4">Delete</span>
                                             </button>
@@ -185,29 +271,29 @@ const imageSelector=(e)=>{
                                     <div className="mx-lg-3 mx-0 bodyMain">
                                         <div className="fieldRow">
                                             <div className="fieldCol">
-                                                <div className="fieldColTitle"><span>Job Name</span></div>
+                                                <div className="fieldColTitle"><span>Category</span></div>
                                                 <div className="fieldColInputMain">
-                                                    <input className="fieldColInput" type='text'/>
+                                                    <input className="fieldColInput" defaultValue={props.projectCategory} onChange={updateCategory} type='text'/>
                                                 </div>
                                             </div>
                                             <div className="fieldCol2">
-                                                <div className="fieldColTitle"><span>Experience</span></div>
+                                                <div className="fieldColTitle"><span>Title</span></div>
                                                 <div className="fieldColInputMain">
-                                                    <input type='text' className="fieldColInput"/>
+                                                    <input type='text' defaultValue={props.projectTitle} onChange={updateTitle}  className="fieldColInput"/>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="fieldRow">
                                                 <div className="fieldCol">
-                                                    <div className="fieldColTitle"><span>Key Skilles</span></div>
+                                                    <div className="fieldColTitle"><span>Tags</span></div>
                                                     <div className="fieldColInputMain">
-                                                        <input type='text' className="fieldColInput"/>
+                                                        <input type='text' defaultValue={props.projectTags} onChange={updateTags}  className="fieldColInput"/>
                                                     </div>
                                                 </div>
                                                 <div className="fieldCol2">
-                                                    <div className="fieldColTitle"><span>Location</span></div>
+                                                    <div className="fieldColTitle"><span>Technology</span></div>
                                                         <div className="fieldColInputMain">
-                                                            <input type='text' className="fieldColInput"/>
+                                                            <input type='text' defaultValue={props.projectTechnology} onChange={updateTechnology}  className="fieldColInput"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -233,8 +319,8 @@ const imageSelector=(e)=>{
                                                                 </span>
                                                             </div>
                                                         <div className="textareaCont">
-                                                            <div
-                                                                contentEditable="true"
+                                                            <textarea
+                                                                // contentEditable="true"
                                                                 className="textareaMain"
                                                                 style={{
                                                                 // width:'300px',
@@ -243,7 +329,9 @@ const imageSelector=(e)=>{
                                                                 border:'1px solid #323232',
                                                                 borderRadius:'5px',
                                                                 }}
-                                                            />
+                                                                defaultValue={props.projectDescription}
+                                                                onChange={updateDescription}
+                                                            ></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -270,24 +358,10 @@ const imageSelector=(e)=>{
                                                 Cancel
                                             </span>
                                         </button>
-                                    <button
-                                        className="updateJob"
-                                        // className="border-0 py-2 px-4"
-                                        style={{
-                                        // background:'#04A8F5',
-                                        // borderRadius:'5px'
-                                    }}
-                                    >
-                                        <span className="updateJobTxt mx-4"
-                                            style={{
-                                                // fontWeight:'400',
-                                                // fontSize:'16px',
-                                                // textAlign:'center',
-                                                // color:'#FFFFFF',
-                                            }}
-                                            >
+                                    <button onClick={updateHandler} className="updateJob">
+                                        <span className="updateJobTxt mx-4">
                                                 Save Changes
-                                            </span>
+                                        </span>
                                     </button>
                                 </Modal.Footer>
                                 </Modal.Dialog>

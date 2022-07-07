@@ -5,12 +5,14 @@ import Header from "components/shared/Header"
 import HeaderSecondary from "components/shared/HeaderSecondary"
 import Sidebar from "components/shared/Sidebar"
 import { Container, Nav, Navbar, Col, Row, Button } from "react-bootstrap"
+// import firebase from './firebase';
 
 import "scss/main.scss"
 
 const LayoutWrapper = ({ path,children }) => {
 	console.log('PATH --> ',window.location.href);
 	const url=window.location.href;
+	// const ref=firebase.firestore().collection('admin')
 	return (
 		<>
 			
@@ -29,7 +31,7 @@ const LayoutWrapper = ({ path,children }) => {
 				
 				url.includes('adminPanel') && 
 				<>
-					<HeaderSecondary />
+					<HeaderSecondary/>
 					<div className="row m-0" style={{minHeight:'90vh'}}>
 						<div  className="col-lg-2 col-md-3 col-sm-4 m-0 p-0">
 							<Sidebar/>
@@ -44,7 +46,7 @@ const LayoutWrapper = ({ path,children }) => {
 				
 				url.includes('adminProject') && 
 				<>
-					<HeaderSecondary />
+					<HeaderSecondary/>
 					<div className="row m-0" style={{minHeight:'90vh'}}>
 						<div  className="col-lg-2 col-md-3 col-sm-4 m-0 p-0">
 							<Sidebar/>

@@ -11,20 +11,17 @@
         padding:100px 0 200px 0;
     } 
     .notesTxt{
-        // font-family: 'Inter';
-        // font-style: normal;
         font-weight: 700;
         font-size: 48px;
-        // line-height: 58px;
         color: #E5E5E5;
     }
     .notesBehind{
-        height:350px;
+        height:469px;
         background-color: white;
     }
     .overlay{
         position:absolute;
-        top:23%;
+        top:21%;
         display: flex;
         justify-content: space-evenly;
         flex-wrap:wrap;
@@ -43,7 +40,7 @@
     }
     .keyCardTxt{
         font-weight: 400;
-        font-size: 16px;
+        font-size: 20px;
         color: #000000;
         padding:0 30px 15px 30px;
     }
@@ -76,23 +73,122 @@
     .notesMain{
         .keyCardTxt{
             font-weight: 300;
-            font-size: 16px;
-            color: #000000;
+            font-size: 20px;
             padding:0 15px 10px 15px;
         }
     }
 }
-@media(max-width:991px) and (min-width:568px){
+@media(max-width:991px) and (min-width:768px){
     .notesMain{
         .keyCardTxt{
             font-weight: 300;
-            font-size: 16px;
-            color: #000000;
+            font-size: 20px;
             padding:0 15px 10px 15px;
         }
         .keyCard{
             width: 45%;
             margin-bottom:20px;
+        }
+        .notesTxt{
+            font-size: 34px;
+        }
+        .notesBehind{
+            height:912px;
+        }
+        .overlay{
+            top:14%;
+        }
+    }
+}
+@media(max-width:767px) and (min-width:568px){
+    .notesMain{
+        .keyCardTxt{
+            font-size: 18px;
+        //     // padding:0 15px 10px 15px;
+        }
+        .keyCard{
+            width: 93%;
+            margin-bottom:20px;
+        }
+        .notesTxt{
+            font-size: 27px;
+        }
+        .notesBehind{
+            height:1090px;
+        }
+        .overlay{
+            top:12%;
+        }
+    }
+}
+@media(max-width:567px) and (min-width:411px){
+    .notesMain{
+        .keyCardTxt{
+            font-size: 18px;
+        //     // padding:0 15px 10px 15px;
+        }
+        .keyCard{
+            width: 93%;
+            margin-bottom:20px;
+        }
+        .notesTxt{
+            font-size: 23px;
+            text-align: center;
+            margin: 0 10px;
+        }
+        .notesBehind{
+            height:1325px;
+        }
+        .overlay{
+            top:11%;
+        }
+        .noteMain{
+            padding:50px 35px;
+        }
+        .noteHeading{
+            font-size:35px;
+        }
+    }
+}
+@media(max-width:410px) and (min-width:0px){
+    .notesMain{
+        // .keyCardTxt{
+            // font-size: 18px;
+        //     // padding:0 15px 10px 15px;
+        // }
+        .keyCard{
+            width: 93%;
+            margin-bottom:10px;
+        }
+        .keyCardHead{
+            padding:20px 0 30px 0;
+        }
+        .keyCardTxt{
+            padding:0 15px 5px 15px;
+        }
+        .notesTxt{
+            font-size: 23px;
+            text-align: center;
+            margin: 0 10px;
+        }
+        .notesTxtCont{
+            padding: 75px 0 150px;
+        }
+        .notesBehind{
+            height:1305px;
+        }
+        .overlay{
+            top:10%;
+        }
+        .noteMain{
+            padding:40px 24px;
+        }
+        .noteHeading{
+            font-size:24px;
+            margin-bottom:25px;
+        }
+        .noteHeadingTxt{
+            font-size:20px;
         }
     }
 }

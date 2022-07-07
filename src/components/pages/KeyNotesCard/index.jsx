@@ -2,7 +2,7 @@ import React from "react";
 import { Container,Row,Col,Button } from "react-bootstrap";
 import {Form, Input} from "antd";
 import * as styles from './styles.module.scss';
-const KeyNotesCard=(props)=>{
+const KeyNotesCard=()=>{
     return(
         <div className={styles.notesMain}>
             <div className={styles.notesSub}>

@@ -24,15 +24,19 @@
     }
     .lFformItem{
         margin-bottom:50px;
+        display:flex;
+        flex-direction: column;
         label{
             font-weight: 300;
             font-size: 24px;
             color: $txt-black;
+            float:left!important;
         }
     }
     .lFinput{
         margin-top:5px;
         width:100%;
+        font-size:20px;
     }
     input{
         border:none;
@@ -56,6 +60,30 @@
         color: $txt-white;
         padding:6px 0;
         text-align: center;
-    }
-    
+    }   
+    .ant-input:focus,
+    .ant-input-focused{
+        border-color: #928F8F!important;
+        box-shadow: 0 0 0 2px transparent!important;
+        border-right-width: 1px;
+        outline: 0;
+    } 
 }
+@media(max-width:576px){
+    .lFMain{
+        .lFSub{
+            // width:100%;
+            padding:60px 10px;
+        }
+        .lFHeading{
+            font-size:41px;
+        }
+    }
+}
+.ant-input:focus,
+.ant-input-focused{
+    border-color: #928F8F !important;
+    box-shadow: 0 0 0 2px #928F8F !important;
+    border-right-width: 1px;
+    outline: 0;
+} 
