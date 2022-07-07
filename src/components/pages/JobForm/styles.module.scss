@@ -1,0 +1,60 @@
+@import "../../../scss/variables.scss";
+
+.applyborder{
+    border: 1px solid $border-clr;
+    margin-top: 30px;
+}
+.radiodiv{
+    display: flex;
+    justify-content: start;
+    padding-left: 20px;
+}
+.getapply{
+    // font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 63px;
+    text-align: center;
+    color: $txt-black;
+    margin-top:60px;
+    padding-bottom: 20px;
+}
+.projectname{
+    color: $pink;
+}
+.Jobform_control{
+    border: hidden;
+    /* border-bottom: 1px solid black; */
+    border-radius: 0px;
+    border-bottom: 1px solid $border-clr;
+    width: 80%;
+}
+.Jobform_control1{
+    border: hidden;
+    /* border-bottom: 1px solid black; */
+    border-radius: 0px;
+    border-bottom: 1px solid $border-clr;
+    width: 96%;
+}
+.Jobbutton{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: $txt-white;
+     width: 30%;
+    // margin-left: 37.5%;
+    background: $gray;
+    border: none;
+    border-radius: 10px $gray;
+    margin-bottom: 20px;
+}
+.divvv{
+    text-align:center;
+}
+.svg{
+    float: right;
+    margin-right: 40px;
+}

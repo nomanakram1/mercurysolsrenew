@@ -1,6 +1,7 @@
 import React from "react"
 import LayoutWrapper from "components/layout/LayoutWrapper"
 import {  Container } from "react-bootstrap";
+import Jobapplypage from "components/pages/jobapply";
 
 const Careerpage = () => {
 	const input = {
@@ -18,8 +19,9 @@ const Careerpage = () => {
 	return (
 		<>
 		<LayoutWrapper>
+			<Jobapplypage></Jobapplypage>
 			<Container>
-				<h2>Career page works...</h2>
+				
 
 			</Container>
 		</LayoutWrapper>

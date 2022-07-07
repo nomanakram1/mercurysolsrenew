@@ -50,11 +50,9 @@ const Customepage = () =>{
                              <StaticImage class={styles.C_images22} src="../../../assets/images/Choosee_main.png"></StaticImage>
                         </div>
                     </div>
-                    <div className={styles.three}>
-                      
+                    {/* <div className={styles.three}>
                              <StaticImage class={styles.C_images3} src="../../../assets/images/DriverMouse.png"></StaticImage>
-                         
-                    </div>
+                    </div> */}
                     <div  className={styles.four}>
                         <div>
                              <StaticImage class={styles.C_images41} src="../../../assets/images/Choosee_main.png"></StaticImage>

@@ -84,28 +84,29 @@ padding-bottom: 30px;
     display: flex;
     justify-content: space-between;
     padding-bottom: 50px;
-    width: 100%;
+    // width: 100%;
 }
 .one{
     // background-color: $purple;
     height: 240px;
-    width:25%
+    width:33.33%;
+    padding-bottom: 50px;
 }
 .two{
     // background-color: $pink;
     height: 240px;
-    width:25%
+    width:33.33%;
+    padding-bottom: 50px;
 }
-.three{
-    // background-color: $cyan;
-    height:340px;
-    // position: inherit;
-    width:25%
-}
+// .three{
+//     height:340px;
+//     width:25%
+// }
 .four{
     // background-color: $blue;
     height: 240px;
-    width:25%
+    width:33.33%;
+    padding-bottom: 50px;
 }
 
 @media(max-width:768px) {
@@ -164,8 +165,10 @@ padding-bottom: 30px;
     border-radius: 10px $gray;
 }
 .btnDiv{
+    
     text-align:center;
     padding-bottom: 50px;
+    padding-top: 40px;
 }
 .Workus{
     // font-family: 'Roboto';
