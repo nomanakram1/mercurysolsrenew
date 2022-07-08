@@ -1,7 +1,9 @@
 @import "../../../scss/variables.scss";
 .looking_main{
-    top: 110px;
+    // top: 100px;
     background: $mild-blue;
+    padding-bottom: 50px;
+    padding-top: 50px;
 
 }
 .looking{
@@ -31,4 +33,24 @@
     color: $primary;
     text-align: center;
     margin-top: 80px;
+}
+.buttonsdiv{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.buttons{
+    background: #02285B;
+    border-radius: 5px;
+    border: none;
+    // font-family: 'Roboto';
+    padding: 8px 20px;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 33px;
+color: #FFFFFF;
+}
+.setmargin{
+    margin: 0px;
 }

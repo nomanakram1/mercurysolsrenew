@@ -3,15 +3,15 @@ import LayoutWrapper from "components/layout/LayoutWrapper"
 import {  Container } from "react-bootstrap"
 import Lookingpage from "components/pages/Looking"
 import Formpage from "components/pages/Form"
+import IPTVPage from "components/pages/IPTV"
 const Iptvpage = () => {
 	return (
 		<>
 			<LayoutWrapper>
-				<Lookingpage></Lookingpage>
+			<Lookingpage></Lookingpage>
+			<IPTVPage></IPTVPage>
 			<Container>
-				<h2>Iptv page works...</h2>
 				<Formpage></Formpage>
-				
 			</Container>
 		</LayoutWrapper>
 		</>
