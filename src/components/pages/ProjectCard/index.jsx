@@ -1,11 +1,9 @@
 import React,{useState,useEffect} from "react";
-import {Popconfirm,Container,Row,Col,Modal} from "react-bootstrap";
-import {Form, Input,message} from "antd";
+import {Container,Row,Col,Modal} from "react-bootstrap";
+import {message} from "antd";
 import styles from './styles.scss';
 import { StaticImage } from "gatsby-plugin-image"
 import 'antd/dist/antd.css';
-import { UploadOutlined } from '@ant-design/icons';
-import { Button, Upload } from 'antd';
 import firebase from '../../../config/firebase';
 // import {UpdateModal} from "../UpdateModal"
 
@@ -50,7 +48,6 @@ const ProjectCard=(props)=>{
             message.info("Error Occured! Can't Update the Record");
         });
         setShowModal(false);
-        handleChange(Date.now());
     }
     const handleModalDelete=()=>{
         setShowConfirm(false);
@@ -97,33 +94,13 @@ const ProjectCard=(props)=>{
         )
     }
     console.log(tempDesc);
-    useEffect(()=>{console.log(updateObj)},[updateObj])
-    const fileList = [
-  {
-    uid: '-1',
-    name: 'xxx.png',
-    status: 'done',
-    url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
-    thumbUrl: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
-  },
-  {
-    uid: '-2',
-    name: 'yyy.png',
-    status: 'error',
-  },
-];
-const imageSelector=(e)=>{
-    // console.log();
-    // var a=URL.createObjectURL(e.target.files);
-    // console.log(a);
-}
-tempDesc.map(item=>{
-    if(item.lenght>0){
-        console.log(item);
-        return({item})
-    }
-})
-
+    const imageSelector=(e)=>{}
+    tempDesc.map(item=>{
+        if(item.lenght>0){
+            console.log(item);
+            return({item})
+        }
+    })
     return(
         <>
         

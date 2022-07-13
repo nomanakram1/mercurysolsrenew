@@ -11,9 +11,9 @@ const AdminProject = () => {
     const [btnTitle,setBtnTitle]=useState('Project');
     const [data,setData]=useState([]);
 	const [value, setValue] = useState("");
-        function handleChange(newValue) {
-          setValue(newValue);
-        }
+    function handleChange(newValue) {
+      setValue(newValue);
+    }
 	useEffect(()=>{
 		setData([]);
 		firebase.firestore().collection('projects').get().then((querySnapshot) => {
@@ -25,7 +25,6 @@ const AdminProject = () => {
             message.info("Error Occured! Can't Fetch the Record");
         });
 	},[value]);
-    useEffect(()=>{console.log(data)},[data]);
 	return (
 		<>
 		<LayoutWrapper>
@@ -51,7 +50,6 @@ const AdminProject = () => {
 						/>
 					)
 				})}
-				{/* <ProjectCard/> */}
             </div>
 		</LayoutWrapper>
 			

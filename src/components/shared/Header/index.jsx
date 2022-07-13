@@ -10,6 +10,7 @@ const Header = () => {
 		<>
 			<Navbar bg="white" variant="light" sticky="top" style={{ boxShadow: "0px 4px 15px 2px rgb(0 0 0 / 25%)"}}>
 				{/* <Container> */}
+				<div>
 					<Navbar.Brand href="/">
 						<Col>
 							{/* <Image src="../../../assets/logos/mercurysolsLogo.svg"></Image> */}
@@ -19,7 +20,7 @@ const Header = () => {
 					<Navbar.Toggle />
 					<Navbar.Collapse className="justify-content-evenly">
 						<Nav>
-							<Nav.Link href="/" className={styles.navlink}></Nav.Link>
+							{/* <Nav.Link href="/" className={styles.navlink}></Nav.Link> */}
 							<Nav.Link href="/company" className={styles.mainNavlink}>COMPANY</Nav.Link>
 							<Nav.Link href="/services" className={styles.mainNavlink}>SERVICES	</Nav.Link>
 							<Nav.Link href="/projects" className={styles.mainNavlink}>PROJECTS	</Nav.Link>
@@ -33,6 +34,7 @@ const Header = () => {
 						<Button className={styles.headerbtn} >Sign In</Button>
 					</Navbar.Collapse>
 				{/* </Container> */}
+				</div>
 			</Navbar>
 		
 

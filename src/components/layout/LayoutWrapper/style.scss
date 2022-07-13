@@ -1,0 +1,16 @@
+.height-0{
+    // height:100%!important;
+}
+.height-full{
+    // height:100%!important;
+}
+@media (max-width:576px){
+    .height-0{
+        height:0!important;
+        transition: ease-out height 0.3s;
+    }
+    .height-full{
+        height:240px!important;
+        transition: ease-out height 0.3s;
+    }
+}

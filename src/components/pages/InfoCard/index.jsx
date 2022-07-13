@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from "react";
-import { Popconfirm,Container,Row,Col,Button,Modal } from "react-bootstrap";
-import {Form, Input,message} from "antd";
+import { Container,Row,Col,Modal } from "react-bootstrap";
+import {message} from "antd";
 import * as styles from './styles.module.scss';
 import firebase from '../../../config/firebase';
 const InfoCard=(props)=>{
@@ -62,7 +62,6 @@ const InfoCard=(props)=>{
         )
     }
     const saveChanges=()=>{
-        
         firebase.firestore().collection('jobs').doc(updateObj.recordId).update(updateObj).then(()=>{
             handleChange(Date.now());
             message.info('Record Updated');
@@ -74,12 +73,12 @@ const InfoCard=(props)=>{
     }
     const handleModalDelete=()=>{
         firebase.firestore().collection('jobs').doc(props.recordId).delete().then(()=>{
-            handleChange(Date.now());
             message.info('Record Deleted');
         }).catch(()=>{
             message.info("Error Occured! Can't Delete the Record");
         });
         setShowConfirm(false);
+        handleChange(Date.now());
     }
     const handleShowConfirm=()=>{
         setShowConfirm(true);

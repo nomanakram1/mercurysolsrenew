@@ -29,4 +29,19 @@
         color: $txt-white;
         margin-left:5px;
     }
+    .sideBarBtns{
+        display:none;
+    }
+}
+@media(max-width:575px){
+    .hSMain{
+        .sideBarBtns{
+            display:block;
+            margin-left:10px;
+        }
+        .msLogoWidth{
+            width:130px!important;
+            margin-top:10px;
+        }
+    }
 }

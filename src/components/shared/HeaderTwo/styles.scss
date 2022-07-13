@@ -1,0 +1,118 @@
+@import "../../../scss/variables.scss";
+*::before{
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.5rem;
+}
+.nav_item{
+    list-style: none;
+}
+.nav_link{
+    text-decoration: none;
+    color: #001C42!important;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+    font-size: 14px;
+    font-weight:500;
+    line-height: 21px;
+    // font-family: "Roboto";
+    font-style: normal;
+    // color: rgb(93, 230, 30);
+}
+.navv{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 9vh; 
+    background: #FFFFFF;
+    box-shadow: "0px 4px 15px 2px rgb(0 0 0 / 25%)";
+    
+}
+.nav_brand{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.nav_menue{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2.5rem;
+    z-index: 1;
+    color: #001C42;
+    margin-bottom: 0px!important;
+}
+.nav_toggler div{
+    width: 3rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background-color: rgb(10, 10, 10);
+    transition: 0.2s ease-in;
+}
+.nav_toggler{
+    cursor: pointer;
+    display: none;
+}
+.nav_toggler{
+    cursor: pointer;
+    display: none;
+}
+.text-end{
+	font-size:16px;
+	font-weight:500;
+	line-height:21px;
+	color:$header-btn;
+	font-family:Roboto;
+	font-style:normal;
+}
+.headerbtn{
+    font-size: 14px!important;
+    border-radius: 10px!important;
+	color: $txt-white !important;
+	 background: $primary !important;
+}
+@media screen and (max-width:768px) {
+    .nav_toggler{
+        display:block
+    }
+    .nav_menue{
+        display:flex;
+        position: fixed;
+        justify-content:  flex-start;
+        margin-top: 10px;
+        top: 7vh;
+        right: 0;
+        width: 50%;
+        height: 93vh;
+        background: #FFFFFF;
+        color: #001C42!important;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+        font-size: 24px;
+        font-weight:500;
+        line-height: 21px;
+        // font-family: "Roboto";
+        font-style: normal;
+        color: $header-btn!important;
+    }
+}
+.nav_active{
+    transform: translateX(0);
+
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-4px,5px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-4px,-5px);
+}
