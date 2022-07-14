@@ -1,4 +1,19 @@
 @import "../../../scss/variables.scss";
+.imgSelectorMain{
+    display:flex;
+    flex-wrap:wrap;
+}
+.imgParent{
+    width:208px;
+    height:132px;
+    margin:5px;
+    position:relative;
+}
+.dltIcnParent{
+    position:absolute;
+    right:0px;
+    top:0px;
+}
 .pcMain{
     background: $txt-white;
     border: 1px solid $border-clr;
@@ -50,7 +65,7 @@
         // height: 241px;
     }
     .pcBar{
-        background: #E5E5E5;
+        background: $gray-light;
         display:flex;
         justify-self: start;
         align-items:center;
@@ -113,7 +128,7 @@
         text-align: center;
     }
     .abc{
-        color:red!important;
+        color:$red!important;
     }
     .projectModal{
         width:20%;
@@ -209,13 +224,13 @@
     border:none;
 }
 .modalMain{
-    background: #FEFEFE;
-    border: 1px solid #000000;
+    background: $gray-light-secondary;
+    border: 1px solid $txt-black;
 }
 .modalTitle{
     font-weight: 600;
     font-size: 20px;
-    color: #3D5A80;
+    color: $cyan-blue;
 }
 .bodyMain{
 
@@ -237,19 +252,19 @@
 }
 .fieldColTitle{
     width:130px;
-    color:#323232;
+    color:$txt-sandstone;
     font-weight:600;
     font-size:18px;
 }
 .fieldColInput{
     width:300px;
     height:40px;
-    background:#FFFFFF;
+    background:$txt-white;
     // border:1px solid #323232;
     border-radius:5px;
     font-weight:600;
     font-size:16px;
-    color:#323232;
+    color:$txt-sandstone;
     padding:4px 10px;
     // py-2 px-3
 }
@@ -267,7 +282,7 @@
 .cancelUpdate{
     width: 200px;
     height: 44px;
-    background: #928F8F;
+    background: $border-clr;
     border-radius: 5px;
     border:none;
     display:felx;
@@ -277,7 +292,7 @@
 .updateJob{
     width: 200px;
     height: 44px;
-    background: #04A8F5;
+    background: $blue;
     border-radius: 5px;
     border:none;
     display:felx;
@@ -288,7 +303,7 @@
     font-weight: 500;
     font-size: 18px;
     text-align: center;
-    color: #FFFFFF;
+    color: $txt-white;
 }
 .confirmModalMain{
     width:100%;
@@ -299,7 +314,7 @@
     font-weight: 400;
     font-size: 17px;
     text-align: center;
-    color: #FF0000;
+    color: $red;
     margin-top:15px;
     margin-left:5px;
     border:none;
@@ -307,7 +322,7 @@
 .cancelConfirm{
     height: 40px;
     width: 150.55px;
-    background: #928F8F;
+    background: $border-clr;
     border-radius: 5px;
     border:none;
     margin:0 10px;
@@ -315,7 +330,7 @@
 .deleteConfirm{ 
     width: 150px;
     height: 40px;
-    background: #C92020;
+    background: $blood-red;
     border-radius: 5px;
     border:none;
     margin:0 10px;
@@ -324,7 +339,7 @@
     font-weight: 400;
     font-size: 20px;
     text-align: center;
-    color: #FFFFFF;
+    color: $txt-white;
 }
 input{
     border-width:1px;

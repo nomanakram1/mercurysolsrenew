@@ -63,7 +63,7 @@
     }   
     .ant-input:focus,
     .ant-input-focused{
-        border-color: #928F8F!important;
+        border-color: $border-clr!important;
         box-shadow: 0 0 0 2px transparent!important;
         border-right-width: 1px;
         outline: 0;
@@ -82,8 +82,8 @@
 }
 .ant-input:focus,
 .ant-input-focused{
-    border-color: #928F8F !important;
-    box-shadow: 0 0 0 2px #928F8F !important;
+    border-color: $border-clr !important;
+    box-shadow: 0 0 0 2px $border-clr!important;
     border-right-width: 1px;
     outline: 0;
 } 

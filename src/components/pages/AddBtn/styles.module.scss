@@ -1,7 +1,7 @@
 @import "../../../scss/variables.scss";
 .abMain{
     background: $txt-white;
-    border: 1px solid #928F8F;
+    border: 1px solid $border-clr;
     border-radius: 5px;
     padding:8px 13px;
     display:flex;

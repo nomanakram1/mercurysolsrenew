@@ -7,17 +7,17 @@
         display:flex;
         justify-content: center;
         align-items:center;
-        background: #3E5E7E;
+        background: $gray;
         padding:100px 0 200px 0;
     } 
     .notesTxt{
         font-weight: 700;
         font-size: 48px;
-        color: #E5E5E5;
+        color: $gray-light;
     }
     .notesBehind{
         height:469px;
-        background-color: white;
+        background-color: $txt-white;
     }
     .overlay{
         position:absolute;
@@ -29,23 +29,23 @@
     }
     .keyCard{
         width: 31.5%;
-        background:#F1F1F1;;
+        background:$offwhite;;
     }
     .keyCardHead{
         font-weight: 600;
         font-size: 28px;
         text-align: center;
-        color: #E29E4E;
+        color: $caramel;
         padding:30px 0 45px  0;
     }
     .keyCardTxt{
         font-weight: 400;
         font-size: 20px;
-        color: #000000;
+        color: $txt-black;
         padding:0 30px 15px 30px;
     }
     .noteMain{
-        background: #DDEBFF;
+        background: $mild-blue;
         padding:90px 60px;
     }
     .noteSub{
@@ -59,13 +59,13 @@
         font-weight: 500;
         font-size: 40px;
         text-align: center;
-        color: #02285B;
+        color: $primary;
     }
     .noteHeadingTxt{
         font-weight: 300;
         font-size: 29px;
         text-align: center;
-        color: #323232;
+        color: $txt-sandstone;
         text-align:center;
     }
 }

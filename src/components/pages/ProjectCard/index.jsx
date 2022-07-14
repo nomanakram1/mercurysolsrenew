@@ -94,7 +94,17 @@ const ProjectCard=(props)=>{
         )
     }
     console.log(tempDesc);
-    const imageSelector=(e)=>{}
+    const imageSelector=(e)=>{
+        console.log(e.target.files);
+        const [file] = e.target.files;
+        const image=URL.createObjectURL(file)
+        setImageList(prevState => ([...prevState, image]));
+    }
+    const handleUnSelectImage=(i)=>{
+        console.log('i',i);
+        const tempImageList=imageList.splice(i,1);
+        setImageList(tempImageList);
+    }
     tempDesc.map(item=>{
         if(item.lenght>0){
             console.log(item);
@@ -127,10 +137,6 @@ const ProjectCard=(props)=>{
                                         )
                                         }
                                     })}
-                                    {/* <li className="pcListItem">Worked with NoSQL and AWS Dynamo DB (optional)</li>
-                                    <li className="pcListItem">Knows and implemented CI/CD</li>
-                                    <li className="pcListItem">Other backend expectations like strong DB skills and optimization of code etc</li>
-                                    <li className="pcListItem">Experience in Design patterns</li> */}
                                 </ul>
                             </div>
                             <div className="pcListMain">
@@ -276,6 +282,23 @@ const ProjectCard=(props)=>{
                                                 </div>
 
                                             <input type="file" onChange={imageSelector}/>
+                                            {<div className="d-flex flex-wrap imgSelectorMain">
+                                                {imageList.map((item,index)=>{
+                                                    return(
+                                                        <div className="imgParent">
+                                                            <img src={item} alt="alternative" style={{width:'100%',height:'100%'}} />
+                                                            <div className="dltIcnParent" onClick={()=>{handleUnSelectImage(index)}}>
+                                                                <span>
+                                                                    <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M7.18205 0.414609C7.05807 0.1605 6.80322 0 6.52542 0H3.76113C3.48333 0 3.22848 0.1605 3.1045 0.414609L2.93919 0.75H0.735112C0.328734 0.75 0.000418663 1.08586 0.000418663 1.5C0.000418663 1.91414 0.328734 2.25 0.735112 2.25H9.55144C9.95713 2.25 10.2861 1.91414 10.2861 1.5C10.2861 1.08586 9.95713 0.75 9.55144 0.75H7.34736L7.18205 0.414609ZM9.5721 3H0.735112V10.5C0.735112 11.3273 1.39404 12 2.2045 12H8.10271C8.89366 12 9.5721 11.3273 9.5721 10.5V3ZM7.73537 4.875V10.125C7.73537 10.3313 7.5494 10.5 7.36802 10.5C7.14532 10.5 7.00067 10.3313 7.00067 10.125V4.875C7.00067 4.66875 7.14532 4.5 7.36802 4.5C7.5494 4.5 7.73537 4.66875 7.73537 4.875ZM5.53129 4.875V10.125C5.53129 10.3313 5.34532 10.5 5.16394 10.5C4.94123 10.5 4.77593 10.3313 4.77593 10.125V4.875C4.77593 4.66875 4.94123 4.5 5.16394 4.5C5.34532 4.5 5.53129 4.66875 5.53129 4.875ZM3.30654 4.875V10.125C3.30654 10.3313 3.14123 10.5 2.93919 10.5C2.73715 10.5 2.57185 10.3313 2.57185 10.125V4.875C2.57185 4.66875 2.73715 4.5 2.93919 4.5C3.14123 4.5 3.30654 4.66875 3.30654 4.875Z" fill="#C92020"/>
+                                                                    </svg>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    )
+                                                })}
+                                            </div>    
+                                            }
 
                                                 {/* <Upload
       action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
